@@ -1,6 +1,7 @@
 # coding=utf-8
 from numpy import *
 import operator
+import matplotlib.pyplot as plt
 
 
 def classify0(in_x, data_set, labels, k):
@@ -26,3 +27,46 @@ def create_data_set():
 
 a_group, a_labels = create_data_set()
 print(classify0([0.6, 0.5], a_group, a_labels, 3))
+
+
+def file_to_matrix(file_name):
+    fr = open(file_name)
+    array_lines = fr.readlines()
+    number_of_lines = len(array_lines)
+    return_mat = zeros((number_of_lines, 3))
+    class_label_vector = []
+    index = 0
+    for line in array_lines:
+        line = line.strip()
+        list_from_line = line.split('\t')
+        return_mat[index, :] = list_from_line[0: 3]
+        class_label_vector.append(int(list_from_line[-1]))
+        index += 1
+    return return_mat, class_label_vector
+
+
+dating_data_mat, dating_labels = file_to_matrix('datingTestSet2.txt')
+print(dating_data_mat)
+print(dating_labels[0:20])
+
+
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)   # 坐标系的不同，参数（1,1,1）
+ax.scatter(dating_data_mat[:, 1], dating_data_mat[:, 2], 15.0 * array(dating_labels), 15.0*array(dating_labels))
+plt.show()
+
+
+# 归一化特征值
+def auto_norm(data_set):
+    min_val = data_set.min(0)
+    max_val = data_set.max(0)
+    ranges = max_val-min_val
+    norm_data_set = zeros(shape(data_set))
+    m = data_set.shape[0]
+    norm_data_set = data_set-tile(min_val, (m, 1))
+    norm_data_set = norm_data_set/tile(ranges, (m, 1))
+    return norm_data_set, ranges, min_val
+
+
+norm_mat, ranges, min_val = auto_norm(dating_data_mat)
+print(norm_mat)
