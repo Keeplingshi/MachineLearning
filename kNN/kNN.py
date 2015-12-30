@@ -7,11 +7,11 @@ import matplotlib.pyplot as plt
 def classify0(in_x, data_set, labels, k):
     # shape 形状，比如一个数组4*2，则array.shape：（4L,2L），array.shape[0]：4，array[1]：2，array[3]就会出错
     data_set_size = data_set.shape[0]
-    diff_mat = tile(in_x, (data_set_size, 1)) - data_set    # tile 将数组A重复n次，构成一个新的数组
-    sq_diff_mat = diff_mat**2   # ** 即多少次方
+    diff_mat = tile(in_x, (data_set_size, 1)) - data_set  # tile 将数组A重复n次，构成一个新的数组
+    sq_diff_mat = diff_mat ** 2  # ** 即多少次方
     sq_distances = sq_diff_mat.sum(axis=1)
-    distances = sq_distances**0.5
-    sorted_dis_indices = distances.argsort()    # 排序
+    distances = sq_distances ** 0.5
+    sorted_dis_indices = distances.argsort()  # 排序
     class_count = {}
     for i in range(4):  # range(k) 到k停止
         vote_label = labels[sorted_dis_indices[i]]
@@ -21,12 +21,9 @@ def classify0(in_x, data_set, labels, k):
 
 
 def create_data_set():
-    group = array([[1.0, 1.1], [1.0, 1.0],  [0, 0], [0, 0.1]])
+    group = array([[1.0, 1.1], [1.0, 1.0], [0, 0], [0, 0.1]])
     labels = ['A', 'A', 'B', 'B']
     return group, labels
-
-a_group, a_labels = create_data_set()
-print(classify0([0.6, 0.5], a_group, a_labels, 3))
 
 
 def file_to_matrix(file_name):
@@ -45,28 +42,30 @@ def file_to_matrix(file_name):
     return return_mat, class_label_vector
 
 
-dating_data_mat, dating_labels = file_to_matrix('datingTestSet2.txt')
-print(dating_data_mat)
-print(dating_labels[0:20])
-
-
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1)   # 坐标系的不同，参数（1,1,1）
-ax.scatter(dating_data_mat[:, 1], dating_data_mat[:, 2], 15.0 * array(dating_labels), 15.0*array(dating_labels))
-plt.show()
-
-
 # 归一化特征值
 def auto_norm(data_set):
     min_val = data_set.min(0)
     max_val = data_set.max(0)
-    ranges = max_val-min_val
-    norm_data_set = zeros(shape(data_set))
+    ranges = max_val - min_val
     m = data_set.shape[0]
-    norm_data_set = data_set-tile(min_val, (m, 1))
-    norm_data_set = norm_data_set/tile(ranges, (m, 1))
+    norm_data_set = data_set - tile(min_val, (m, 1))
+    norm_data_set = norm_data_set / tile(ranges, (m, 1))
     return norm_data_set, ranges, min_val
 
 
-norm_mat, ranges, min_val = auto_norm(dating_data_mat)
-print(norm_mat)
+def dating_class_test():
+    ho_ratio = 0.50  # hold out 10%
+    dating_data_mat, dating_labels = file_to_matrix('datingTestSet2.txt')  # load data_set from file
+    norm_mat, ranges, min_vals = auto_norm(dating_data_mat)
+    m = norm_mat.shape[0]
+    num_test_vecs = int(m * ho_ratio)
+    error_count = 0.0
+    for i in range(num_test_vecs):
+        classifier_result = classify0(norm_mat[i, :], norm_mat[num_test_vecs:m, :], dating_labels[num_test_vecs:m], 3)
+        print "the classifier came back with: %d, the real answer is: %d" % (classifier_result, dating_labels[i])
+        if (classifier_result != dating_labels[i]): error_count += 1.0
+    print "the total error rate is: %f" % (error_count / float(num_test_vecs))
+    print error_count
+
+
+print dating_class_test()
