@@ -4,6 +4,12 @@ import operator
 from os import listdir
 
 
+# kNN算法
+# 1、计算已知类别数据集中的点与当前点之间的距离
+# 2、按照距离递增次序排序
+# 3、选取与当前距离最小的k个点
+# 4、确定k个点所在类别出现频率
+# 5、返回前k个点出现频率最高的类别作为当前点的预测分类
 def classify0(in_x, data_set, labels, k):
     # shape 形状，比如一个数组4*2，则array.shape：（4L,2L），array.shape[0]：4，array[1]：2，array[3]就会出错
     data_set_size = data_set.shape[0]
@@ -11,9 +17,9 @@ def classify0(in_x, data_set, labels, k):
     sq_diff_mat = diff_mat ** 2  # ** 即多少次方
     sq_distances = sq_diff_mat.sum(axis=1)
     distances = sq_distances ** 0.5
-    sorted_dis_indices = distances.argsort()  # 排序
+    sorted_dis_indices = distances.argsort()  # 排序，返回序号
     class_count = {}
-    for i in range(4):  # range(k) 到k停止
+    for i in range(k):  # range(k) 到k停止
         vote_label = labels[sorted_dis_indices[i]]
         class_count[vote_label] = class_count.get(vote_label, 0) + 1
     sorted_class_count = sorted(class_count.iteritems(), key=operator.itemgetter(1), reverse=True)
@@ -82,13 +88,13 @@ def handwriting_class_est():
     hw_labels = []
     training_file_list = listdir('trainingDigits')           # load the training set
     m = len(training_file_list)
-    training_mat = zeros((m,1024))
+    training_mat = zeros((m, 1024))
     for i in range(m):
         file_name_str = training_file_list[i]
         file_str = file_name_str.split('.')[0]     # take off .txt
         class_num_str = int(file_str.split('_')[0])
         hw_labels.append(class_num_str)
-        training_mat[i,:] = img_to_vector('trainingDigits/%s' % file_name_str)
+        training_mat[i, :] = img_to_vector('trainingDigits/%s' % file_name_str)
     test_file_list = listdir('testDigits')        # iterate through the test set
     error_count = 0.0
     m_test = len(test_file_list)
