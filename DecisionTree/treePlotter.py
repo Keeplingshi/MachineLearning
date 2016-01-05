@@ -1,83 +1,81 @@
+# coding=utf-8
 import matplotlib.pyplot as plt
 
 decisionNode = dict(boxstyle="sawtooth", fc="0.8")
 leafNode = dict(boxstyle="round4", fc="0.8")
 arrow_args = dict(arrowstyle="<-")
 
-def getNumLeafs(myTree):
-    numLeafs = 0
-    firstStr = myTree.keys()[0]
-    secondDict = myTree[firstStr]
-    for key in secondDict.keys():
-        if type(secondDict[key]).__name__=='dict':#test to see if the nodes are dictonaires, if not they are leaf nodes
-            numLeafs += getNumLeafs(secondDict[key])
-        else:   numLeafs +=1
-    return numLeafs
 
-def getTreeDepth(myTree):
-    maxDepth = 0
-    firstStr = myTree.keys()[0]
-    secondDict = myTree[firstStr]
-    for key in secondDict.keys():
-        if type(secondDict[key]).__name__=='dict':#test to see if the nodes are dictonaires, if not they are leaf nodes
-            thisDepth = 1 + getTreeDepth(secondDict[key])
-        else:   thisDepth = 1
-        if thisDepth > maxDepth: maxDepth = thisDepth
-    return maxDepth
+# 获取叶节点数目
+def get_num_leafs(my_tree):
+    num_leafs = 0
+    first_str = my_tree.keys()[0]
+    second_dict = my_tree[first_str]
+    for key in second_dict.keys():
+        if type(second_dict[key]).__name__ == 'dict':
+            num_leafs += get_num_leafs(second_dict[key])
+        else: num_leafs += 1
+    return num_leafs
 
-def plotNode(nodeTxt, centerPt, parentPt, nodeType):
-    createPlot.ax1.annotate(nodeTxt, xy=parentPt,  xycoords='axes fraction',
-             xytext=centerPt, textcoords='axes fraction',
-             va="center", ha="center", bbox=nodeType, arrowprops=arrow_args )
 
-def plotMidText(cntrPt, parentPt, txtString):
-    xMid = (parentPt[0]-cntrPt[0])/2.0 + cntrPt[0]
-    yMid = (parentPt[1]-cntrPt[1])/2.0 + cntrPt[1]
-    createPlot.ax1.text(xMid, yMid, txtString, va="center", ha="center", rotation=30)
+# 获取树的层数
+def get_tree_depth(my_tree):
+    max_depth = 0
+    first_str = my_tree.keys()[0]
+    second_dict = my_tree[first_str]
+    for key in second_dict.keys():
+        if type(second_dict[key]).__name__ == 'dict':
+            this_depth = 1 + get_tree_depth(second_dict[key])
+        else:   this_depth = 1
+        if this_depth > max_depth: max_depth = this_depth
+    return max_depth
 
-def plotTree(myTree, parentPt, nodeTxt):#if the first key tells you what feat was split on
-    numLeafs = getNumLeafs(myTree)  #this determines the x width of this tree
-    depth = getTreeDepth(myTree)
-    firstStr = myTree.keys()[0]     #the text label for this node should be this
-    cntrPt = (plotTree.xOff + (1.0 + float(numLeafs))/2.0/plotTree.totalW, plotTree.yOff)
-    plotMidText(cntrPt, parentPt, nodeTxt)
-    plotNode(firstStr, cntrPt, parentPt, decisionNode)
-    secondDict = myTree[firstStr]
-    plotTree.yOff = plotTree.yOff - 1.0/plotTree.totalD
-    for key in secondDict.keys():
-        if type(secondDict[key]).__name__=='dict':#test to see if the nodes are dictonaires, if not they are leaf nodes
-            plotTree(secondDict[key],cntrPt,str(key))        #recursion
-        else:   #it's a leaf node print the leaf node
-            plotTree.xOff = plotTree.xOff + 1.0/plotTree.totalW
-            plotNode(secondDict[key], (plotTree.xOff, plotTree.yOff), cntrPt, leafNode)
-            plotMidText((plotTree.xOff, plotTree.yOff), cntrPt, str(key))
-    plotTree.yOff = plotTree.yOff + 1.0/plotTree.totalD
-#if you do get a dictonary you know it's a tree, and the first element will be another dict
 
-def createPlot(inTree):
+def plot_node(node_txt, center_pt, parent_pt, node_type):
+    create_plot.ax1.annotate(node_txt, xy=parent_pt, xycoords='axes fraction',
+                             xytext=center_pt, textcoords='axes fraction',
+                             va="center", ha="center", bbox=node_type, arrowprops=arrow_args)
+
+
+def plot_mid_text(cntr_pt, parent_pt, txt_string):
+    x_mid = (parent_pt[0] - cntr_pt[0]) / 2.0 + cntr_pt[0]
+    y_mid = (parent_pt[1] - cntr_pt[1]) / 2.0 + cntr_pt[1]
+    create_plot.ax1.text(x_mid, y_mid, txt_string, va="center", ha="center", rotation=30)
+
+
+def plot_tree(my_tree, parent_pt, node_txt):
+    num_leafs = get_num_leafs(my_tree)
+    depth = get_tree_depth(my_tree)
+    first_str = my_tree.keys()[0]
+    cntr_pt = (plot_tree.xOff + (1.0 + float(num_leafs)) / 2.0 / plot_tree.totalW, plot_tree.yOff)
+    plot_mid_text(cntr_pt, parent_pt, node_txt)
+    plot_node(first_str, cntr_pt, parent_pt, decisionNode)
+    second_dict = my_tree[first_str]
+    plot_tree.yOff = plot_tree.yOff - 1.0 / plot_tree.totalD
+    for key in second_dict.keys():
+        if type(second_dict[key]).__name__ == 'dict':
+            plot_tree(second_dict[key], cntr_pt, str(key))
+        else:
+            plot_tree.xOff = plot_tree.xOff + 1.0 / plot_tree.totalW
+            plot_node(second_dict[key], (plot_tree.xOff, plot_tree.yOff), cntr_pt, leafNode)
+            plot_mid_text((plot_tree.xOff, plot_tree.yOff), cntr_pt, str(key))
+    plot_tree.yOff = plot_tree.yOff + 1.0 / plot_tree.totalD
+
+
+def create_plot(inTree):
     fig = plt.figure(1, facecolor='white')
     fig.clf()
     axprops = dict(xticks=[], yticks=[])
-    createPlot.ax1 = plt.subplot(111, frameon=False, **axprops)    #no ticks
-    #createPlot.ax1 = plt.subplot(111, frameon=False) #ticks for demo puropses
-    plotTree.totalW = float(getNumLeafs(inTree))
-    plotTree.totalD = float(getTreeDepth(inTree))
-    plotTree.xOff = -0.5/plotTree.totalW; plotTree.yOff = 1.0;
-    plotTree(inTree, (0.5,1.0), '')
+    create_plot.ax1 = plt.subplot(111, frameon=False, **axprops)
+    plot_tree.totalW = float(get_num_leafs(inTree))
+    plot_tree.totalD = float(get_tree_depth(inTree))
+    plot_tree.xOff = -0.5 / plot_tree.totalW; plot_tree.yOff = 1.0
+    plot_tree(inTree, (0.5, 1.0), '')
     plt.show()
 
-#def createPlot():
-#    fig = plt.figure(1, facecolor='white')
-#    fig.clf()
-#    createPlot.ax1 = plt.subplot(111, frameon=False) #ticks for demo puropses
-#    plotNode('a decision node', (0.5, 0.1), (0.1, 0.5), decisionNode)
-#    plotNode('a leaf node', (0.8, 0.1), (0.3, 0.8), leafNode)
-#    plt.show()
 
-def retrieveTree(i):
-    listOfTrees =[{'no surfacing': {0: 'no', 1: {'flippers': {0: 'no', 1: 'yes'}}}},
+def retrieve_tree(i):
+    list_of_trees =[{'no surfacing': {0: 'no', 1: {'flippers': {0: 'no', 1: 'yes'}}}},
                   {'no surfacing': {0: 'no', 1: {'flippers': {0: {'head': {0: 'no', 1: 'yes'}}, 1: 'no'}}}}
                   ]
-    return listOfTrees[i]
-
-#createPlot(thisTree)
+    return list_of_trees[i]

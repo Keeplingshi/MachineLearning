@@ -1,6 +1,7 @@
 # coding=utf-8
 from math import log
 import operator
+import treePlotter
 
 
 # 计算数据集的熵
@@ -95,36 +96,27 @@ def create_tree(data_set, labels):
     return my_tree
 
 
-def classify(inputTree,featLabels,testVec):
-    firstStr = inputTree.keys()[0]
-    secondDict = inputTree[firstStr]
-    featIndex = featLabels.index(firstStr)
-    key = testVec[featIndex]
-    valueOfFeat = secondDict[key]
-    if isinstance(valueOfFeat, dict):
-        classLabel = classify(valueOfFeat, featLabels, testVec)
-    else: classLabel = valueOfFeat
-    return classLabel
+def classify(input_tree, feat_labels, test_vec):
+    first_str = input_tree.keys()[0]
+    second_dict = input_tree[first_str]
+    feat_index = feat_labels.index(first_str)
+    key = test_vec[feat_index]
+    value_of_feat = second_dict[key]
+    if isinstance(value_of_feat, dict):
+        class_label = classify(value_of_feat, feat_labels, test_vec)
+    else: class_label = value_of_feat
+    return class_label
 
 
-def storeTree(inputTree,filename):
+def store_tree(input_tree, filename):
     import pickle
-    fw = open(filename,'w')
-    pickle.dump(inputTree,fw)
+    fw = open(filename, 'w')
+    pickle.dump(input_tree, fw)
     fw.close()
 
 
-def grabTree(filename):
+def grab_tree(filename):
     import pickle
     fr = open(filename)
     return pickle.load(fr)
-
-
-a, b = create_data_set()
-print a
-# print calc_shannon_ent(a)
-# print split_data_set(a, 0, 1)
-# print choose_best_feature_to_split(a)
-tree = create_tree(a, b)
-print tree
 
