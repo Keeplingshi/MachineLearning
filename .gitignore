@@ -57,3 +57,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+.idea/
+python/.idea/
