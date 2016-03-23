@@ -24,7 +24,6 @@ def randCent(dataSet, k):
         minJ=min(dataSet[:,j])
         maxJ=max(dataSet[:,j])
         rangeJ=float(maxJ-minJ)     #最大-最小的差值
-        print(rangeJ)
         centroids[:,j] = minJ + rangeJ * random.rand(k,1)   #保证随机点在数据的边界之中
     return centroids
 
@@ -47,8 +46,13 @@ def kMeans(dataSet, k):
                 clusterChanged = True
             clusterAssment[i,:] = minIndex,minDist**2
         for cent in range(k):
+            print(cent)
+            #nonzero(a) 将对矩阵a的所有非零元素， 分别安装两个维度， 一次返回其在各维度上的目录值。
             ptsInClust = dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]   #找出属于cent簇的dataSet集合
+            print(ptsInClust)
             centroids[cent,:] = mean(ptsInClust, axis=0)    #mean求平均
+            print(centroids)
+            print("================")
     return centroids, clusterAssment
 
 def showCluster(dataSet, k, centroids, clusterAssment):
