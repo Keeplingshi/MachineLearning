@@ -24,6 +24,7 @@ def randCent(dataSet, k):
         minJ=min(dataSet[:,j])
         maxJ=max(dataSet[:,j])
         rangeJ=float(maxJ-minJ)     #最大-最小的差值
+        print(rangeJ)
         centroids[:,j] = minJ + rangeJ * random.rand(k,1)   #保证随机点在数据的边界之中
     return centroids
 
@@ -38,14 +39,16 @@ def kMeans(dataSet, k):
             minDist = inf   #正无穷
             minIndex = -1
             for j in range(k):
-                distJI = distEclud(centroids[j,:],dataSet[i,:])
+                distJI = distEclud(centroids[j,:],dataSet[i,:])     #计算距离
                 if distJI < minDist:
-                    minDist = distJI;minIndex = j
-            if clusterAssment[i,0] != minIndex: clusterChanged = True
+                    minDist = distJI
+                    minIndex = j
+            if clusterAssment[i,0] != minIndex:     #簇变化
+                clusterChanged = True
             clusterAssment[i,:] = minIndex,minDist**2
         for cent in range(k):
-            ptsInClust = dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]
-            centroids[cent,:] = mean(ptsInClust, axis=0)
+            ptsInClust = dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]   #找出属于cent簇的dataSet集合
+            centroids[cent,:] = mean(ptsInClust, axis=0)    #mean求平均
     return centroids, clusterAssment
 
 def showCluster(dataSet, k, centroids, clusterAssment):
