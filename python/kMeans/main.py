@@ -11,6 +11,6 @@ datMat=mat(kMeans.loadDataSet('testSet.txt'))
 
 k = 4
 centroids, clusterAssment = kMeans.kMeans(datMat, k)
-#print(clusterAssment)
+#print(centroids)
 
-#kMeans.showCluster(datMat, k, centroids, clusterAssment)
+kMeans.showCluster(datMat, k, centroids, clusterAssment)

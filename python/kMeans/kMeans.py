@@ -46,17 +46,30 @@ def kMeans(dataSet, k):
                 clusterChanged = True
             clusterAssment[i,:] = minIndex,minDist**2
         for cent in range(k):
-            print(cent)
+            #=================自己实现，结果相同======================
+            # avgx=0
+            # avgy=0
+            # count=0
+            # for t in range(m):
+            #     if clusterAssment[t,0]==cent:
+            #         avgx=avgx+dataSet[t,0]
+            #         avgy=avgy+dataSet[t,1]
+            #         count+=1
+            # if count!=0:
+            #     avgx=avgx/count
+            #     avgy=avgy/count
+            # centroids[cent,:]=avgx,avgy
+            #=================自己实现，结果相同======================
             #nonzero(a) 将对矩阵a的所有非零元素， 分别安装两个维度， 一次返回其在各维度上的目录值。
             ptsInClust = dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]   #找出属于cent簇的dataSet集合
-            print(ptsInClust)
             centroids[cent,:] = mean(ptsInClust, axis=0)    #mean求平均
-            print(centroids)
-            print("================")
+            #print(centroids[cent,:])
+            #print("================")
     return centroids, clusterAssment
 
 def showCluster(dataSet, k, centroids, clusterAssment):
     numSamples, dim = dataSet.shape
+    print(numSamples)
     if dim != 2:
         print("Sorry! I can not draw because the dimension of your data is not 2!")
         return 1
