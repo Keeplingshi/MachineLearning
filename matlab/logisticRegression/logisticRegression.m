@@ -1,7 +1,7 @@
 function [weights,dataSet,labelMat]=logisticRegression(filename)
     format long
     [dataSet,labelMat]=loadDataSet(filename);
-    [m,n]=size(dataSet);
+    n=size(dataSet,2);
     alpha = 0.001;  %向目标移动的步长
     maxCycles = 500;    %迭代次数
     weights = ones(n,1);
