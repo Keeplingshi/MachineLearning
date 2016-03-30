@@ -8,7 +8,7 @@ function [weights,dataSet,labelMat]=logisticRegression(filename)
     for k=1:maxCycles
         h=sigmoid(dataSet*weights);
         error=(labelMat-h);
-        weights = weights + alpha *dataSet.'* error;
+        weights = weights + alpha *dataSet.'* error
     end
 
 end

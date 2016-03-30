@@ -1,12 +1,17 @@
+clear;
+clc;
 load('Flame.mat');
 [a,b]=size(Flame);
 
 dataSet=zeros(a,b+1);
 dataSet(:,1)=1;
-dataSet(:,2:b+1)=Flame(:,:);
-labelMat=labels;
+dataSet(:,2)=Flame(:,1);
+dataSet(:,3)=Flame(:,2);
+dataSet(:,4)=Flame(:,1).^2;
 
-weights=logisticFlame(dataSet,labelMat);
+labelMat=labels-1;
+
+weights=logisticFlame(dataSet*0.01,labelMat)
 m=size(dataSet,1);
 for i=1:m
     if labels(i, 1)==1
@@ -18,7 +23,9 @@ for i=1:m
     end
 end
 
-x=linspace(0,15,50);
-y = (-weights(1,1)-weights(2,1)*x)/weights(3,1); 
-%plot(x(1,:),y(1,:),'k-','MarkerSize',15);
+syms x y eq;
+eq=weights(1,1)+weights(2,1)*x+weights(3,1)*y+weights(4,1)*x*x;
+%eq=x*x-y;
+ezplot(eq);
+
 hold off;

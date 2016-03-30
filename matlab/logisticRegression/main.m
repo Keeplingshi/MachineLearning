@@ -1,3 +1,5 @@
+clear;
+clc;
 [weights,dataSet,labelMat]=logisticRegression('testSet.txt');
 [m,n]=size(dataSet);
 
