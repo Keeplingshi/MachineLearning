@@ -46,9 +46,35 @@ def plotBestFit(weights,dataMat,labelMat):
     ax.scatter(xcord1, ycord1, s=30, c='red', marker='s')
     ax.scatter(xcord2, ycord2, s=30, c='green')
     x = arange(-3.0, 3.0, 0.1)
-    print(x)
     y = (-weights[0]-weights[1]*x)/weights[2]
-    print(y)
     ax.plot(x, y)
     plt.xlabel('X1'); plt.ylabel('X2');
     plt.show()
+
+
+#随机梯度上升算法
+def stocGradAscent0(dataMatrix, classLabels):
+    m,n = shape(dataMatrix)
+    alpha = 0.01
+    weights = ones(n)   #initialize to all ones
+    for i in range(m):
+        h = sigmoid(sum(dataMatrix[i]*weights))
+        error = classLabels[i] - h
+        weights = weights + alpha * error * dataMatrix[i]
+    return weights
+
+
+#改进的随机梯度上升算法
+def stocGradAscent1(dataMatrix, classLabels, numIter=150):
+    m,n = shape(dataMatrix)
+    weights = ones(n)   #initialize to all ones
+    for j in range(numIter):
+        dataIndex = range(m)
+        for i in range(m):
+            alpha = 4/(1.0+j+i)+0.0001    #apha decreases with iteration, does not
+            randIndex = int(random.uniform(0,len(list(dataIndex))))#go to 0 because of the constant
+            h = sigmoid(sum(dataMatrix[randIndex]*weights))
+            error = classLabels[randIndex] - h
+            weights = weights + alpha * error * dataMatrix[randIndex]
+            del(list(dataIndex)[randIndex])
+    return weights

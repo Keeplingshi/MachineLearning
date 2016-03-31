@@ -1,6 +1,7 @@
 clear;
 clc;
 [weights,dataSet,labelMat]=logisticRegression('testSet.txt');
+
 [m,n]=size(dataSet);
 
 for i=1:m
@@ -13,8 +14,8 @@ for i=1:m
     end
 end
 
-x=linspace(-3,3,2)
-y = (-weights(1,1)-weights(2,1)*x)/weights(3,1)
+x=linspace(-3,3,50);
+y = (-weights(1,1)-weights(1,2)*x)/weights(1,3);
 
 plot(x(1,:),y(1,:),'k-','MarkerSize',15);
 hold off;

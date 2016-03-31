@@ -6,7 +6,10 @@ dataMat,labelMat=logisticRegression.loadDataSet('testSet.txt')
 #print(dataMat)
 #print(labelMat)
 
-weights=logisticRegression.gradAscent(dataMat,labelMat)
+#weights=logisticRegression.gradAscent(dataMat,labelMat)
+#print(weights)
+
+weights=logisticRegression.stocGradAscent1(array(dataMat),labelMat)
 print(weights)
 
-logisticRegression.plotBestFit(weights.getA(),dataMat,labelMat)
+logisticRegression.plotBestFit(weights,dataMat,labelMat)

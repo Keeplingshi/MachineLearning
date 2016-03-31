@@ -1,14 +1,23 @@
 function [weights,dataSet,labelMat]=logisticRegression(filename)
     format long
     [dataSet,labelMat]=loadDataSet(filename);
-    n=size(dataSet,2);
-    alpha = 0.001;  %向目标移动的步长
+    [m,n]=size(dataSet);
+    %alpha = 0.001;  %向目标移动的步长
     maxCycles = 500;    %迭代次数
-    weights = ones(n,1);
-    for k=1:maxCycles
-        h=sigmoid(dataSet*weights);
-        error=(labelMat-h);
-        weights = weights + alpha *dataSet.'* error
+    weights = ones(1,n);
+    for j=1:maxCycles
+        dataIndex=1:1:m;
+        for i=1:m
+            if(isempty(dataIndex))
+                break;
+            end
+            alpha = 4/(1.0+j+i)+0.0001;
+            randIndex=ceil(rand(1,1)*length(dataIndex));
+            h=sigmoid(weights*dataSet(randIndex,:).');
+            error=(labelMat(randIndex,:)-h);
+            weights = weights + alpha * error * dataSet(randIndex,:);
+            dataIndex(:,randIndex)=[];
+        end
     end
 
 end
