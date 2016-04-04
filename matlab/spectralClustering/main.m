@@ -1,29 +1,22 @@
 clc
+clf
 clear
-load('XOR.mat');
-dataSet=XOR;
-Z=pdist(dataSet);   %计算每两个点之间距离，例如：300个点，300*299/2=44850条线
-W=squareform(Z);    %连接矩阵
-k=4;    %
 
-C = spectral(W, k);
+%twoCircles数据集
+load('twoCircles.mat');
+dataSet=twoCircles;
+num_clusters=2;
+sigma=0.05;
 
-[m,n]=size(dataSet);
+%XOR数据集
+% load('XOR.mat');
+% dataSet=XOR;
+% num_clusters=4;
+% sigma=10;
 
-plot(dataSet(C==1,1),dataSet(C==1,2),'ro', dataSet(C==2,1),dataSet(C==2,2),'bo', dataSet(C==3,1),dataSet(C==3,2),'go', dataSet(C==4,1),dataSet(C==4,2),'mo');
+Z=pdist(dataSet);
+W=squareform(Z);
 
-% for i=1:m
-% 	if C(i, 1)==1
-%          plot(dataSet(i,1),dataSet(i,2),'bo');
-%          hold on;
-%      elseif C(i, 1)==2
-%      	plot(dataSet(i,1),dataSet(i,2),'ro');
-%          hold on;
-%     elseif C(i, 1)==3
-%      	plot(dataSet(i,1),dataSet(i,2),'go');
-%          hold on;
-%      else 
-%          plot(dataSet(i,1),dataSet(i,2),'mo');
-%          hold on;
-%  	end
-% end
+C = spectral(W,sigma, num_clusters);
+
+plot(dataSet(C==1,1),dataSet(C==1,2),'r.', dataSet(C==2,1),dataSet(C==2,2),'b.', dataSet(C==3,1),dataSet(C==3,2),'g.', dataSet(C==4,1),dataSet(C==4,2),'m.');
