@@ -1,5 +1,4 @@
-function [centroids,clusterAssment,dataSet]=kMeans(filename,k)
-    dataSet=loadDataSet(filename);
+function [centroids,clusterAssment,dataSet]=kMeansPathbased(dataSet,k)
     m=size(dataSet,1);
     clusterAssment = zeros(m,2);    %m行2列全零矩阵,用来存储簇分配结果，两列，一列记录簇索引值，另一列存储误差（当前点到簇质心的距离）
     centroids = randCent(dataSet, k);
@@ -43,11 +42,6 @@ function [centroids,clusterAssment,dataSet]=kMeans(filename,k)
     end
 end
 
-%读取文本数据，以矩阵形式返回
-function dataSet=loadDataSet(filename)
-    dataSet=importdata(filename,'\t');
-end
-
 %计算两点之间距离
 function dist=distEclud(vecA, vecB)
     vecSum=(vecA(1,:)-vecB(1,:)).^2;
@@ -55,7 +49,7 @@ function dist=distEclud(vecA, vecB)
 end
 
 function centroids=randCent(dataSet,k)
-    [m,n]=size(dataSet);    % m:输出x有多少行   n:输出x有多少列
+    n=size(dataSet,2);    % m:输出x有多少行   n:输出x有多少列
     centroids=zeros(k,n);
     for j=1:n
        minJ=min(dataSet(:,j));  %第j列最大值
