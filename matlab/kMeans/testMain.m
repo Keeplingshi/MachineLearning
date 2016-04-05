@@ -1,6 +1,6 @@
-k=2;
-load('circledata.mat')
-dataSet=data';
+k=4;
+load('XOR.mat')
+dataSet=XOR;
 [centroids,clusterAssment,dataSet]=kMeansTest(dataSet,k);
 [m,n]=size(dataSet);
 
