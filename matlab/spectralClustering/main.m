@@ -5,17 +5,16 @@ clear
 %twoCircles数据集
 load('twoCircles.mat');
 dataSetOri=twoCircles;
-dataSet=dataSetOri/max(max(abs(dataSetOri)));
+dataSet=dataSetOri/(max(max(abs(dataSetOri)))-min(min(abs(dataSetOri))));
 num_clusters=2;
 sigma=0.1;
 
 %XOR数据集
 % load('XOR.mat');
 % dataSetOri=XOR;
-% dataSet=dataSetOri/max(max(abs(dataSetOri)));
+% dataSet=dataSetOri/(max(max(abs(dataSetOri)))-min(min(abs(dataSetOri))));
 % num_clusters=4;
 % sigma=0.1;
-
 
 Z=pdist(dataSet);
 W=squareform(Z);
