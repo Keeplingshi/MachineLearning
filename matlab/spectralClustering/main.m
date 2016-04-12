@@ -3,11 +3,11 @@ clf
 clear
 
 %twoCircles数据集
-% load('twoCircles.mat');
-load('Iris.mat');
-dataSetOri=Iris;
+load('twoCircles.mat');
+% load('Iris.mat');
+dataSetOri=twoCircles;
 dataSet=dataSetOri/(max(max(abs(dataSetOri)))-min(min(abs(dataSetOri))));
-num_clusters=3;
+num_clusters=2;
 sigma=0.1;
 
 %XOR数据集
