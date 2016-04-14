@@ -68,10 +68,10 @@ def dating_class_test():
     error_count = 0.0
     for i in range(num_test_vecs):
         classifier_result = classify0(norm_mat[i, :], norm_mat[num_test_vecs:m, :], dating_labels[num_test_vecs:m], 3)
-        print "the classifier came back with: %d, the real answer is: %d" % (classifier_result, dating_labels[i])
+        print("the classifier came back with: %d, the real answer is: %d" % (classifier_result, dating_labels[i]))
         if (classifier_result != dating_labels[i]): error_count += 1.0
-    print "the total error rate is: %f" % (error_count / float(num_test_vecs))
-    print error_count
+    print("the total error rate is: %f" % (error_count / float(num_test_vecs)))
+    print(error_count)
 
 
 def img_to_vector(filename):
@@ -104,7 +104,7 @@ def handwriting_class_est():
         class_num_str = int(file_str.split('_')[0])
         vector_under_test = img_to_vector('testDigits/%s' % file_name_str)
         classifier_result = classify0(vector_under_test, training_mat, hw_labels, 3)
-        print "the classifier came back with: %d, the real answer is: %d" % (classifier_result, class_num_str)
+        print("the classifier came back with: %d, the real answer is: %d" % (classifier_result, class_num_str))
         if (classifier_result != class_num_str): error_count += 1.0
-    print "\nthe total number of errors is: %d" % error_count
-    print "\nthe total error rate is: %f" % (error_count/float(m_test))
+    print("\nthe total number of errors is: %d" % error_count)
+    print("\nthe total error rate is: %f" % (error_count/float(m_test)))
