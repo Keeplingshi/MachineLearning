@@ -26,7 +26,7 @@ end
 
 sum=(a.*labels)'*W;
 
-while 1%迭代过程
+while 1 %迭代过程
     
     %启发式选点
     n1 = 1;%初始化，n1,n2代表选择的2个点
@@ -44,6 +44,8 @@ while 1%迭代过程
         end
         n1 = n1 + 1;
     end
+    
+    
     %n2按照最大化|E1-E2|的原则选取
     E1 = 0;
     E2 = 0;
@@ -58,11 +60,13 @@ while 1%迭代过程
         end
     end
     
+    
     %以下进行更新
     a1old = a(n1);
     a2old = a(n2);
     KK = W(n1,n1) + W(n2,n2) - 2*W(n1,n2);
     a2new = a2old + labels(n2) *(E1 - E2) / KK;%计算新的a2
+    
     %a2必须满足约束条件
     S = labels(n1) * labels(n2);
     if S == -1
@@ -99,12 +103,16 @@ while 1%迭代过程
         Wnew= Wnew+ a(i);
     end
     Wnew= Wnew - 0.5 * tempSum;
+    
+    
     %以下更新b：通过找到某一个支持向量来计算
     support = 1;%支持向量坐标初始化
     while abs(a(support))< 1e-4 && support <= n
         support = support + 1;
     end
     b = 1 / labels(support) - sum(support);
+    
+    
     %判断停止条件
     if abs(Wnew/ Wold - 1 ) <= TOL
         break;
