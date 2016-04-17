@@ -1,6 +1,6 @@
 clear;
-load('twoCircles.mat');
-dataSet=twoCircles;
+load('XOR.mat');
+dataSet=XOR;
 plot(dataSet(labels==1,1),dataSet(labels==1,2),'r.', dataSet(labels==2,1),dataSet(labels==2,2),'b.');
 
 

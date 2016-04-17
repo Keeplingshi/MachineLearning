@@ -1,3 +1,6 @@
+clc;
+clear;
+
 k=4;
 load('XOR.mat')
 dataSet=XOR;
@@ -21,3 +24,5 @@ for i=1:m
 end
 
 plot(centroids(:,1),centroids(:,2),'kX','MarkerSize',12);
+
+score=nmi(labels,clusterAssment(:,1));
