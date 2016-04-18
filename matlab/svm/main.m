@@ -1,10 +1,16 @@
 clear;%清屏
 clc;
-dataOri =load('data.txt');
-n = length(dataOri);%总样本数量
-dataSet = dataOri(:,1:3);
-labels = dataOri(:,4);%类别标志
-labels(labels==0) = -1;
+% dataOri =load('data.txt');
+% n = length(dataOri);%总样本数量
+% dataSet = dataOri(:,1:3);
+% labels = dataOri(:,4);%类别标志
+% labels(labels==0) = -1;
+
+load('Flame.mat');
+dataSet = Flame;
+n = length(dataSet);%总样本数量
+% labels = dataOri(:,4);%类别标志
+% labels(labels==0) = -1;
 
 sigma=1;        %高斯核函数
 TOL = 0.0001;   %精度要求
@@ -118,21 +124,37 @@ while 1 %迭代过程
         break;
     end
 end
+
+%输出结果：包括原分类，辨别函数计算结果，svm分类结果
+% for i = 1 : n
+%     fprintf('第%d点:原标号 ',i);
+%     if i <= 50
+%         fprintf('-1');
+%     else
+%         fprintf(' 1');
+%     end
+%     fprintf('    判别函数值%f      分类结果',sum(i) + b);
+%     if abs(sum(i) + b - 1) < 0.5
+%         fprintf('1\n');
+%     else if abs(sum(i) + b + 1) < 0.5
+%             fprintf('-1\n');
+%         else
+%             fprintf('归类错误\n');
+%         end
+%     end
+% end
+
+result=zeros(n,1);
 %输出结果：包括原分类，辨别函数计算结果，svm分类结果
 for i = 1 : n
-    fprintf('第%d点:原标号 ',i);
-    if i <= 50
-        fprintf('-1');
-    else
-        fprintf(' 1');
-    end
-    fprintf('    判别函数值%f      分类结果',sum(i) + b);
     if abs(sum(i) + b - 1) < 0.5
-        fprintf('1\n');
-    else if abs(sum(i) + b + 1) < 0.5
-            fprintf('-1\n');
-        else
-            fprintf('归类错误\n');
-        end
+        result(i)=2;
+    else
+        result(i)=1;
     end
 end
+
+% labels(labels==-1)=2;
+% result(result==-1)=2;
+
+score=nmi(labels,result);
