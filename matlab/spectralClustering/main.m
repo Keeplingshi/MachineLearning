@@ -4,18 +4,18 @@ clear
 
 %twoCircles数据集
 %load('twoCircles.mat');
-load('Iris.mat');
-dataSetOri=Iris;
-dataSet=dataSetOri/(max(max(abs(dataSetOri)))-min(min(abs(dataSetOri))));
-num_clusters=3;
-sigma=0.1;
+% load('Iris.mat');
+% dataSetOri=Iris;
+% dataSet=dataSetOri/(max(max(abs(dataSetOri)))-min(min(abs(dataSetOri))));
+% num_clusters=3;
+% sigma=0.1;
 
 %XOR数据集
-% load('XOR.mat');
-% dataSetOri=XOR;
-% dataSet=dataSetOri/(max(max(abs(dataSetOri)))-min(min(abs(dataSetOri))));
-% num_clusters=4;
-% sigma=0.1;
+load('XOR.mat');
+dataSetOri=XOR;
+dataSet=dataSetOri/(max(max(abs(dataSetOri)))-min(min(abs(dataSetOri))));
+num_clusters=2;
+sigma=0.1;
 
 Z=pdist(dataSet);
 W=squareform(Z);
