@@ -20,7 +20,7 @@ b = 0;          %初始设置截距b
 Wold = 0;       %未更新a时的W(a)
 Wnew = 0;       %更新a后的W(a)
 
-a = ones(n,1)*0.2;  %参数a
+a = ones(n,1)*0.1;  %参数a，随机初始化a,a属于[0,C]
 
 %高斯核函数处理数据
 W=pdist(dataSet);
