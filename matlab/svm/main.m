@@ -20,25 +20,27 @@ b = 0;          %初始设置截距b
 Wold = 0;       %未更新a时的W(a)
 Wnew = 0;       %更新a后的W(a)
 
-a = ones(n,1)*0.1;  %参数a，随机初始化a,a属于[0,C]
+a = ones(n,1)*0.2;  %参数a，随机初始化a,a属于[0,C]
 
 %高斯核函数处理数据
-W=pdist(dataSet);
-W=squareform(W);
-W = -W.^2/(2*sigma*sigma);
-W = full(spfun(@exp, W));
+K=pdist(dataSet);
+K=squareform(K);
+K = -K.^2/(2*sigma*sigma);
+K = full(spfun(@exp, K));
 for i=1:n
-    W(i,i)=1;
+    K(i,i)=1;
 end
 
-sum=(a.*labels)'*W;
+sum=(a.*labels)'*K;
+%sum=labels'*K+b;
 
-while 1 %迭代过程
+
+while 1 
     
-    %启发式选点
-    n1 = 1;%初始化，n1,n2代表选择的2个点
+    %启发式选点，n1,n2代表选择的2个点
+    n1 = 1;
     n2 = 2;
-    %n1按照第一个违反KKT条件的点选择
+    %n1，第一个违反KKT条件的点选择
     while n1 <= n
         if labels(n1) * (sum(n1) + b) == 1 && a(n1) >= C && a(n1) <=  0
             break;
@@ -52,9 +54,7 @@ while 1 %迭代过程
         n1 = n1 + 1;
     end
     
-    
     %n2按照最大化|E1-E2|的原则选取
-    E1 = 0;
     E2 = 0;
     maxDiff = 0;%假设的最大误差
     E1 = sum(n1) + b - labels(n1);%n1的误差
@@ -67,45 +67,43 @@ while 1 %迭代过程
         end
     end
     
-    
     %以下进行更新
     a1old = a(n1);
     a2old = a(n2);
-    KK = W(n1,n1) + W(n2,n2) - 2*W(n1,n2);
-    a2new = a2old + labels(n2) *(E1 - E2) / KK;%计算新的a2
+    KK = K(n1,n1) + K(n2,n2) - 2*K(n1,n2);
+    a2new = a2old + labels(n2) *(E1 - E2) / KK;
     
-    %a2必须满足约束条件
-    S = labels(n1) * labels(n2);
-    if S == -1
-        U = max(0,a2old - a1old);
-        V = min(C,C - a1old + a2old);
+    yy=labels(n1) * labels(n2);
+    if yy==-1
+        L=max(0,a2old - a1old);
+        H=min(C,C + a2old - a1old );
     else
-        U = max(0,a1old + a2old - C);
-        V = min(C,a1old + a2old);
+        L=max(0,a1old + a2old - C);
+        H=min(C,a1old + a2old);
     end
-    if a2new > V
-        a2new = V;
-    end
-    if a2new < U
-        a2new = U;
-    end
-    a1new = a1old + S * (a2old - a2new);%计算新的a1
-    a(n1) = a1new;%更新a
+    
+    a2new=min(a2new,H);
+    a2new=max(a2new,L);
+    a1new = a1old + yy * (a2old - a2new);
+    
+    %更新a
+    a(n1) = a1new;
     a(n2) = a2new;
     
-    %更新部分值
-    sum = zeros(n,1);
-    for k = 1 : n
-        for i = 1 : n
-            sum(k) = sum(k) + a(i) * labels(i) * W(i,k);
-        end
-    end
+    %更新Ei和b
+    sum=(a.*labels)'*K;
+%     sum = zeros(n,1);
+%     for k = 1 : n
+%         for i = 1 : n
+%             sum(k) = sum(k) + a(i) * labels(i) * K(i,k);
+%         end
+%     end
     Wold = Wnew;
     Wnew = 0;%更新a后的W(a)
     tempSum = 0;%临时变量
     for i = 1 : n
         for j = 1 : n
-            tempSum= tempSum + labels(i )*labels(j)*a(i)*a(j)*W(i,j);
+            tempSum= tempSum + labels(i )*labels(j)*a(i)*a(j)*K(i,j);
         end
         Wnew= Wnew+ a(i);
     end
