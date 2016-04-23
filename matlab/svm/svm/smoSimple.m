@@ -1,6 +1,6 @@
 function [b,alphas] = smoSimple(data, class, C, toler, maxIter)
 b = 0;
-[m,n] = size(data);
+[m,~] = size(data);
 alphas = zeros(m,1);
 iter=0;
 while (iter < maxIter)

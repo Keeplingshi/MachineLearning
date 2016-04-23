@@ -23,6 +23,7 @@ Wnew = 0;       %更新a后的W(a)
 a = ones(n,1)*0.2;  %参数a，随机初始化a,a属于[0,C]
 
 %高斯核函数处理数据
+% K=dataSet;
 K=pdist(dataSet);
 K=squareform(K);
 K = -K.^2/(2*sigma*sigma);
@@ -34,9 +35,7 @@ end
 sum=(a.*labels)'*K;
 %sum=labels'*K+b;
 
-
-while 1 
-    
+while 1
     %启发式选点，n1,n2代表选择的2个点
     n1 = 1;
     n2 = 2;
@@ -59,11 +58,11 @@ while 1
     maxDiff = 0;%假设的最大误差
     E1 = sum(n1) + b - labels(n1);%n1的误差
     for i = 1 : n
-        tempSum = sum(i) + b - labels(i);
-        if abs(E1 - tempSum)> maxDiff
-            maxDiff = abs(E1 - tempSum);
+        tempW = sum(i) + b - labels(i);
+        if abs(E1 - tempW)> maxDiff
+            maxDiff = abs(E1 - tempW);
             n2 = i;
-            E2 = tempSum;
+            E2 = tempW;
         end
     end
     
@@ -92,23 +91,17 @@ while 1
     
     %更新Ei和b
     sum=(a.*labels)'*K;
-%     sum = zeros(n,1);
-%     for k = 1 : n
-%         for i = 1 : n
-%             sum(k) = sum(k) + a(i) * labels(i) * K(i,k);
-%         end
-%     end
+    
     Wold = Wnew;
     Wnew = 0;%更新a后的W(a)
-    tempSum = 0;%临时变量
+    tempW=0;
     for i = 1 : n
         for j = 1 : n
-            tempSum= tempSum + labels(i )*labels(j)*a(i)*a(j)*K(i,j);
+            tempW= tempW + labels(i )*labels(j)*a(i)*a(j)*K(i,j);
         end
         Wnew= Wnew+ a(i);
     end
-    Wnew= Wnew - 0.5 * tempSum;
-    
+    Wnew= Wnew - tempW/2;
     
     %以下更新b：通过找到某一个支持向量来计算
     support = 1;%支持向量坐标初始化
@@ -133,14 +126,19 @@ for i = 1 : n
         fprintf(' 1');
     end
     fprintf('    判别函数值%f      分类结果',sum(i) + b);
-    if abs(sum(i) + b - 1) < 0.5
+    if sum(i) + b  < 0
+        fprintf('-1\n');
+    else 
         fprintf('1\n');
-    else if abs(sum(i) + b + 1) < 0.5
-            fprintf('-1\n');
-        else
-            fprintf('归类错误\n');
-        end
     end
+%     if abs(sum(i) + b - 1) < 0.5
+%         fprintf('1\n');
+%     else if abs(sum(i) + b + 1) < 0.5
+%             fprintf('-1\n');
+%         else
+%             fprintf('归类错误\n');
+%         end
+%     end
 end
 
 % result=zeros(n,1);

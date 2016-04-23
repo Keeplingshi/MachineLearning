@@ -22,15 +22,15 @@ for k = 1:1:r
 end
 
 %画支持向量及分割面
-%result=[];
-for k=1:1:r
-    if alphas(k)~= 0
-        hold on
-        %result =[result;alphas(k)];
-        QX = plot(Data(k,1:1),Data(k,2:2),'Ok','MarkerSize',12);
-        set(QX,'LineWidth',2.0);
-    end
-end
+% result=[];
+% for k=1:1:r
+%     if alphas(k)~= 0
+%         hold on
+%         %result =[result;alphas(k)];
+%         QX = plot(Data(k,1:1),Data(k,2:2),'Ok','MarkerSize',12);
+%         set(QX,'LineWidth',2.0);
+%     end
+% end
 W=(alphas.*Label)'*Data(:,1:2);
 y=(-W(1).* Data(:,1:1)-b) ./W(2);
 plot(Data(:,1:1),y);
