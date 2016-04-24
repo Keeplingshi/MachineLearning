@@ -35,6 +35,7 @@ for i=1:n
 end
 
 sum=(a.*labels)'*K;
+%sum=labels'*K+b;
 
 while 1
     %启发式选点，n1,n2代表选择的2个点
@@ -123,7 +124,7 @@ while 1
 end
 
 for i = 1 : n
-    if sum(i) + b  < 0
+    if a(i)*dataSet + b  < 0
         fprintf('-1\n');
     else 
         fprintf('1\n');
