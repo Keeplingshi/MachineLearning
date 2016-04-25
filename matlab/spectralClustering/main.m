@@ -1,5 +1,4 @@
 clc
-%clf
 clear
 
 %twoCirclesÊý¾Ý¼¯

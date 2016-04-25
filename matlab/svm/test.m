@@ -29,13 +29,13 @@ a = ones(n,1)*0.2;  %参数a，随机初始化a,a属于[0,C]
 K=pdist(dataSet);
 K=squareform(K);
 K = -K.^2/(2*sigma*sigma);
-K = full(spfun(@exp, K));
-for i=1:n
-    K(i,i)=1;
-end
+K=exp(K);
+% K = full(spfun(@exp, K));
+% for i=1:n
+%     K(i,i)=1;
+% end
 
 sum=(a.*labels)'*K;
-%sum=labels'*K+b;
 
 while 1
     %启发式选点，n1,n2代表选择的2个点
@@ -124,7 +124,7 @@ while 1
 end
 
 for i = 1 : n
-    if a(i)*dataSet + b  < 0
+    if sum(i) + b  < 0
         fprintf('-1\n');
     else 
         fprintf('1\n');

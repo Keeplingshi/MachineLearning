@@ -17,13 +17,7 @@ function [alpha,b]=svm(dataSet,labels,sigma,C)
     alpha = ones(n,1)*C/2;  %参数a，随机初始化a,a属于[0,C]
 
     %高斯核函数处理数据
-    K=pdist(dataSet);
-    K=squareform(K);
-    K = -K.^2/(2*sigma*sigma);
-    K = full(spfun(@exp, K));
-    for i=1:n
-        K(i,i)=1;
-    end
+    K=kernelTrans(dataSet,sigma);
 
     sum=(alpha.*labels)'*K;
 
@@ -114,3 +108,10 @@ function [alpha,b]=svm(dataSet,labels,sigma,C)
     end
 
 end
+
+function K = kernelTrans(dataSet,sigma)
+    K=pdist(dataSet);
+    K=squareform(K);
+    K = -K.^2/(2*sigma*sigma);
+    K=exp(K);
+end  
