@@ -32,22 +32,22 @@ C=1;
 %svm—µ¡∑
 [alpha,b]=svm(dataSet,labels,sigma,C);
 
-K=pdist(dataSet);
-K=squareform(K);
-K = -K.^2/(2*sigma*sigma);
-K=exp(K);
-
-sum=(alpha.*labels)'*K;
-
-labelsnew=zeros(n,1);
-for i = 1 : n
-    if sum(i) + b  < 0
-        labelsnew(i)=2;
-    else 
-        labelsnew(i)=1;
-    end
-end
-
-labels(labels==-1) = 2;
-
-score=nmi(labels,labelsnew)
+% K=pdist(dataSet);
+% K=squareform(K);
+% K = -K.^2/(2*sigma*sigma);
+% K=exp(K);
+% 
+% sum=(alpha.*labels)'*K;
+% 
+% labelsnew=zeros(n,1);
+% for i = 1 : n
+%     if sum(i) + b  < 0
+%         labelsnew(i)=2;
+%     else 
+%         labelsnew(i)=1;
+%     end
+% end
+% 
+% labels(labels==-1) = 2;
+% 
+% score=nmi(labels,labelsnew)
