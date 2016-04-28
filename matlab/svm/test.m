@@ -22,20 +22,28 @@ bnew=0;
 Wold = 0;       %未更新a时的W(a)
 Wnew = 0;       %更新a后的W(a)
 
-a = ones(n,1)*0.2;  %参数a，随机初始化a,a属于[0,C]
+a = ones(n,1)*0.5;  %参数a，随机初始化a,a属于[0,C]
 
 %高斯核函数处理数据
-% K=dataSet;
-K=pdist(dataSet);
-K=squareform(K);
-K = -K.^2/(2*sigma*sigma);
-K=exp(K);
+K=dataSet;
+% K=pdist(dataSet);
+% K=squareform(K);
+% K = -K.^2/(2*sigma*sigma);
+% K=exp(K);
 % K = full(spfun(@exp, K));
 % for i=1:n
 %     K(i,i)=1;
 % end
 
-sum=(a.*labels)'*K;
+[~,m]=size(K);
+w=zeros(1,m);
+for i=1:m
+    for j=1:n
+        w=w+a(j)*labels(j)*K(j,:);
+    end
+end
+
+%sum=(a.*labels)'*K;
 
 while 1
     %启发式选点，n1,n2代表选择的2个点
@@ -43,13 +51,13 @@ while 1
     n2 = 2;
     %n1，第一个违反KKT条件的点选择
     while n1 <= n
-        if labels(n1) * (sum(n1) + b) == 1 && a(n1) >= C && a(n1) <=  0
+        if labels(n1) * (w*K(n1,:)' + b) == 1 && a(n1) >= C && a(n1) <=  0
             break;
         end
-        if labels(n1) * (sum(n1) + b) > 1 && a(n1) ~=  0
+        if labels(n1) * (w*K(n1,:)' + b) > 1 && a(n1) ~=  0
             break;
         end
-        if labels(n1) * (sum(n1) + b) < 1 && a(n1) ~=C
+        if labels(n1) * (w*K(n1,:)' + b) < 1 && a(n1) ~=C
             break;
         end
         n1 = n1 + 1;
@@ -58,9 +66,9 @@ while 1
     %n2按照最大化|E1-E2|的原则选取
     E2 = 0;
     maxDiff = 0;%假设的最大误差
-    E1 = sum(n1) + b - labels(n1);%n1的误差
+    E1 = w*K(n1,:)' + b - labels(n1);%n1的误差
     for i = 1 : n
-        tempW = sum(i) + b - labels(i);
+        tempW = w*K(n1,:)' + b - labels(i);
         if abs(E1 - tempW)> maxDiff
             maxDiff = abs(E1 - tempW);
             n2 = i;
@@ -71,7 +79,8 @@ while 1
     %以下进行更新
     a1old = a(n1);
     a2old = a(n2);
-    KK = K(n1,n1) + K(n2,n2) - 2*K(n1,n2);
+    KK=K(n1,:)*K(n1,:)'+K(n2,:)*K(n2,:)'-2*K(n1,:)*K(n2,:)';
+    %KK = K(n1,n1) + K(n2,n2) - 2*K(n1,n2);
     a2new = a2old + labels(n2) *(E1 - E2) / KK;
     
     yy=labels(n1) * labels(n2);
@@ -92,14 +101,19 @@ while 1
     a(n2) = a2new;
     
     %更新Ei和b
-    sum=(a.*labels)'*K;
+    %sum=(a.*labels)'*K;
+    for i=1:m
+        for j=1:n
+            w=w+a(j)*labels(j)*K(j,:);
+        end
+    end
     
     Wold = Wnew;
     Wnew = 0;%更新a后的W(a)
     tempW=0;
     for i = 1 : n
         for j = 1 : n
-            tempW= tempW + labels(i )*labels(j)*a(i)*a(j)*K(i,j);
+            tempW= tempW + labels(i )*labels(j)*a(i)*a(j)*K(i,:)*K(j,:)';
         end
         Wnew= Wnew+ a(i);
     end
@@ -123,13 +137,13 @@ while 1
     end
 end
 
-for i = 1 : n
-    if sum(i) + b  < 0
-        fprintf('-1\n');
-    else 
-        fprintf('1\n');
-    end
-end
+% for i = 1 : n
+%     if w*K(i,:)' + b  < 0
+%         fprintf('-1\n');
+%     else 
+%         fprintf('1\n');
+%     end
+% end
 %输出结果：包括原分类，辨别函数计算结果，svm分类结果
 % for i = 1 : n
 %     fprintf('第%d点:原标号 ',i);
@@ -146,17 +160,17 @@ end
 %     end
 % end
 
-% result=zeros(n,1);
-% %输出结果：包括原分类，辨别函数计算结果，svm分类结果
-% for i = 1 : n
-%     if abs(sum(i) + b - 1) < 0.5
-%         result(i)=2;
-%     else
-%         result(i)=1;
-%     end
-% end
+result=zeros(n,1);
+%输出结果：包括原分类，辨别函数计算结果，svm分类结果
+for i = 1 : n
+    if w*K(i,:)' + b < 0
+        result(i)=2;
+    else
+        result(i)=1;
+    end
+end
 
-% labels(labels==-1)=2;
-% result(result==-1)=2;
+labels(labels==-1)=2;
+%result(result==-1)=2;
 
-% score=nmi(labels,result);
+score=nmi(labels,result);
