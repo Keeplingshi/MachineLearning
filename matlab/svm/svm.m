@@ -8,7 +8,9 @@ function [alpha,b]=svm(dataSet,labels,sigma,C)
 % 输出  : alpha : 
 %         b：     截距
 
-    n = length(dataSet);%总样本数量
+    [n,m]=size(dataSet);%总样本数量
+    
+    wt=zeros(1,m);
 
     TOL = 0.0001;   %精度要求
     b = 0;          %初始设置截距b

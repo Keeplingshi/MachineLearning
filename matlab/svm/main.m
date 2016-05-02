@@ -1,13 +1,13 @@
 clear;
 clc;
-% dataOri =load('data.txt');
-% n = length(dataOri);%总样本数量
-% dataSet = dataOri(:,1:3);
-% dataSet=dataSet/(max(max(abs(dataSet)))-min(min(abs(dataSet))));
-% labels = dataOri(:,4);%类别标志
-% labels(labels==0) = -1;
-% sigma=0.1;        %高斯核函数
-% C = 1;
+dataOri =load('data.txt');
+n = length(dataOri);%总样本数量
+dataSet = dataOri(:,1:3);
+dataSet=dataSet/(max(max(abs(dataSet)))-min(min(abs(dataSet))));
+labels = dataOri(:,4);%类别标志
+labels(labels==0) = -1;
+sigma=0.1;        %高斯核函数
+C = 1;
 
 %twoCircles数据集
 % load('twoCircles.mat');
@@ -19,13 +19,13 @@ clc;
 % C = 1;
 
 %biodeg,SpectfHeart数据集
-load('SpectfHeart.mat');
-dataSetOri=SpectfHeart;
-n = length(dataSetOri);
-dataSet=dataSetOri/max(max(abs(dataSetOri)));
-labels(labels==2) = -1;
-sigma=0.1;
-C=1;
+% load('SpectfHeart.mat');
+% dataSetOri=SpectfHeart;
+% n = length(dataSetOri);
+% dataSet=dataSetOri/max(max(abs(dataSetOri)));
+% labels(labels==2) = -1;
+% sigma=0.1;
+% C=1;
 % svm_train=dataSet(2:3:end,:);
 % svm_train_labels=labels(2:3:end,:);
 
