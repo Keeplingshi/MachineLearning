@@ -1,4 +1,4 @@
-function [alpha,b]=svm(dataSet,labels,sigma,C)
+function [wt,alpha,b]=svm(dataSet,labels,sigma,C)
 % 二分类svm
 % 输入  : dataSet       : 数据集
 %        labels         ：分类
@@ -72,6 +72,9 @@ function [alpha,b]=svm(dataSet,labels,sigma,C)
         a2new=min(a2new,H);
         a2new=max(a2new,L);
         a1new = a1old + yy * (a2old - a2new);
+        wt=wt+labels(n1)*(a1new-a1old)*dataSet(i,:)+labels(n2)*(a2new-a2old)*dataSet(n2,:);
+%         ai_new = a(i) + y(i) * y(j) * (a(j) - aj_clip);
+%        w = w + y(i) * (ai_new - a(i)) * x(i,:) + y(j) * (aj_clip - a(j)) * x(j,:);
 
         %更新a
         alpha(n1) = a1new;
