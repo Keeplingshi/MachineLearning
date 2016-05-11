@@ -5,7 +5,8 @@ function [wt,alpha,b]=svm(dataSet,labels,sigma,C)
 %        sigma          : 高斯核函数,sigma值
 %        C              : 参数，对损失函数的权重
 %
-% 输出  : alpha : 
+% 输出  : wt : 
+%         alpha : 
 %         b：     截距
 
     [n,m]=size(dataSet);%总样本数量
@@ -73,8 +74,6 @@ function [wt,alpha,b]=svm(dataSet,labels,sigma,C)
         a2new=max(a2new,L);
         a1new = a1old + yy * (a2old - a2new);
         wt=wt+labels(n1)*(a1new-a1old)*dataSet(i,:)+labels(n2)*(a2new-a2old)*dataSet(n2,:);
-%         ai_new = a(i) + y(i) * y(j) * (a(j) - aj_clip);
-%        w = w + y(i) * (ai_new - a(i)) * x(i,:) + y(j) * (aj_clip - a(j)) * x(j,:);
 
         %更新a
         alpha(n1) = a1new;
