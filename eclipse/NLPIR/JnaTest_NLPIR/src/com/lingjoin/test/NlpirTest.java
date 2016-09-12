@@ -17,10 +17,18 @@ public class NlpirTest {
 		t.testFileProcess();
 	}*/
 	
+	@Test
+	public void test()
+	{
+		String content="曾经有一份真挚的感情摆在我的面前我没有珍惜，等我失去的时候才追悔莫及，人间最痛苦的事莫过于此，你的剑在我的咽喉上刺下去吧，不用在犹豫了！如果上天能给我一次再来一次的机会，我会对哪个女孩说三个字：我爱你，如果非要在这份爱上加一个期限，我希望是一万年！";
+		String result=NlpirMethod.NLPIR_ParagraphProcess(content,0);
+		System.out.println(result.replace(" ", "\n"));
+	}
+	
 	/**
 	 * 测试文本分词
 	 */
-	@Test
+	//@Test
 	public void testParagraphProcess(){
 		String content = "据俄罗斯卫星网8月11日发布美国《国家利益》杂志刊登的文章称，中国购买俄制苏-27第四代战机，为本国空军翻开了现代史的页章。" +
 				"从那时起，中国空军日益强大。中国空军长期以来落后于像美国这样的世界大国，从2008年起中国开始研制堪舆美国F-22猛禽战机和F-35闪电-II相媲美的第五代战机J-20和J-31，" +
@@ -34,7 +42,7 @@ public class NlpirTest {
 	/**
 	 * 测试文本路径分词
 	 */
-	@Test
+	//@Test
 	public void testFileProcess(){
 		double flag = NlpirMethod.NLPIR_FileProcess("test/source.txt", "test/result.txt", 1);
 		System.out.println(flag);
@@ -43,7 +51,7 @@ public class NlpirTest {
 	/**
 	 * 测试细粒度分词
 	 */
-	@Test
+	//@Test
 	public void testFinerSegment(){
 		String content = "据俄罗斯卫星网8月11日发布美国《国家利益》杂志刊登的文章称，中国购买俄制苏-27第四代战机，为本国空军翻开了现代史的页章。" +
 				"从那时起，中国空军日益强大。中国空军长期以来落后于像美国这样的世界大国，从2008年起中国开始研制堪舆美国F-22猛禽战机和F-35闪电-II相媲美的第五代战机J-20和J-31，" +
@@ -57,7 +65,7 @@ public class NlpirTest {
 	/**
 	 * 测试文本关键词
 	 */
-	@Test
+	//@Test
 	public void testKeyWords(){
 		String content = "据俄罗斯卫星网8月11日发布美国《国家利益》杂志刊登的文章称，中国购买俄制苏-27第四代战机，为本国空军翻开了现代史的页章。" +
 				"从那时起，中国空军日益强大。中国空军长期以来落后于像美国这样的世界大国，从2008年起中国开始研制堪舆美国F-22猛禽战机和F-35闪电-II相媲美的第五代战机J-20和J-31，" +
@@ -71,7 +79,7 @@ public class NlpirTest {
 	/**
 	 * 测试文本路径关键词
 	 */
-	@Test
+	//@Test
 	public void testFileKeyWords(){
 		String result = NlpirMethod.NLPIR_GetFileKeyWords("test/source.txt", 100, true);
 		System.out.println(result);
@@ -80,7 +88,7 @@ public class NlpirTest {
 	/**
 	 * 测试文本新词(有时文本太短，没有新词)
 	 */
-	@Test
+	//@Test
 	public void testNewWords(){
 		String content = "日前，网友上传了052D型驱逐舰173号长沙舰在蓝色水面上航行照片。有网友猜测，长沙舰已经交付南海舰队，是中国海军已列装的第二艘，同时也是最新一艘的052D型神盾级驱逐舰。" +
 				"新闻延伸：英国《简氏防务周刊》近日再次谈及中国海军更新换代的热点话题，报道称，中国第二艘052D型导弹驱逐舰长沙舰于7月中旬服役，并已加入解放军南海舰队，预计将部署到海南岛亚龙湾基地。" +
@@ -97,7 +105,7 @@ public class NlpirTest {
 	/**
 	 * 测试文本路径新词(有时文本太短，没有新词)
 	 */
-	@Test
+	//@Test
 	public void testFileNewWords(){
 		String result = NlpirMethod.NLPIR_GetFileNewWords("test/source.txt", 100, true);
 		System.out.println(result);
@@ -106,7 +114,7 @@ public class NlpirTest {
 	/**
 	 * 测试添加用户自定义词
 	 */
-	@Test
+	//@Test
 	public void testAddUserWord(){
 		int flag1 = NlpirMethod.NLPIR_AddUserWord("卫星网 user");
 		System.out.println(flag1);
@@ -126,7 +134,7 @@ public class NlpirTest {
 	/**
 	 * 测试删除用户自定义词
 	 */
-	@Test
+	//@Test
 	public void testDelUsrWord(){
 		int flag1 = NlpirMethod.NLPIR_DelUsrWord("国家利益");
 		System.out.println(flag1);
@@ -146,7 +154,7 @@ public class NlpirTest {
 	/**
 	 * 测试导入用户词典
 	 */
-	@Test
+	//@Test
 	public void testImportUserDict(){
 		int flag = NlpirMethod.NLPIR_ImportUserDict("dict/user_dict.txt", true);
 		System.out.println(flag);
@@ -155,7 +163,7 @@ public class NlpirTest {
 	/**
 	 * 测试导入关键词黑名单
 	 */
-	@Test
+	//@Test
 	public void testImportKeyBlack(){
 		int flag = NlpirMethod.NLPIR_ImportKeyBlackList("dict/black_dict.txt");
 		System.out.println(flag);
@@ -164,7 +172,7 @@ public class NlpirTest {
 	/**
 	 * 测试文章指纹码
 	 */
-	@Test
+	//@Test
 	public void testFingerPrint(){
 		String content = "日前，网友上传了052D型驱逐舰173号长沙舰在蓝色水面上航行照片。有网友猜测，长沙舰已经交付南海舰队，是中国海军已列装的第二艘，同时也是最新一艘的052D型神盾级驱逐舰。" +
 				"新闻延伸：英国《简氏防务周刊》近日再次谈及中国海军更新换代的热点话题，报道称，中国第二艘052D型导弹驱逐舰长沙舰于7月中旬服役，并已加入解放军南海舰队，预计将部署到海南岛亚龙湾基地。" +
@@ -181,7 +189,7 @@ public class NlpirTest {
 	/**
 	 * 测试单词词性
 	 */
-	@Test
+	//@Test
 	public void testWordPOS(){
 		String result = NlpirMethod.NLPIR_GetWordPOS("中国");
 		System.out.println(result);
@@ -190,7 +198,7 @@ public class NlpirTest {
 	/**
 	 * 测试是否在词库中
 	 */
-	@Test
+	//@Test
 	public void testIsWord(){
 		int flag = NlpirMethod.NLPIR_IsWord("中国");
 		System.out.println(flag);
@@ -199,7 +207,7 @@ public class NlpirTest {
 	/**
 	 * 测试文本词频
 	 */
-	@Test
+	//@Test
 	public void testWordFreq(){
 		String content = "据俄罗斯卫星网8月11日发布美国《国家利益》杂志刊登的文章称，中国购买俄制苏-27第四代战机，为本国空军翻开了现代史的页章。" +
 				"从那时起，中国空军日益强大。中国空军长期以来落后于像美国这样的世界大国，从2008年起中国开始研制堪舆美国F-22猛禽战机和F-35闪电-II相媲美的第五代战机J-20和J-31，" +
@@ -213,7 +221,7 @@ public class NlpirTest {
 	/**
 	 * 测试文本路径词频
 	 */
-	@Test
+	//@Test
 	public void testFileWordFreq(){
 		String result = NlpirMethod.NLPIR_FileWordFreqStat("test/source.txt");
 		System.out.println(result);
@@ -222,7 +230,7 @@ public class NlpirTest {
 	/**
 	 * 测试英文单词原型
 	 */
-	@Test
+	//@Test
 	public void testEngWordOrign(){
 		String result = NlpirMethod.NLPIR_GetEngWordOrign("got");
 		System.out.println(result);
