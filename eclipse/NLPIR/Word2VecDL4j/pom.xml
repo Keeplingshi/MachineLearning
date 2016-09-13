@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Word2VecDL4j</groupId>
+  <artifactId>Word2VecDL4j</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+	  <nd4j.version>0.5.0</nd4j.version>
+	  <dl4j.version>0.5.0</dl4j.version>
+  </properties>
+  
+  <dependencies>
+  <dependency>
+     <groupId>org.deeplearning4j</groupId>
+     <artifactId>deeplearning4j-ui</artifactId>
+     <version>${dl4j.version}</version>
+   </dependency>
+   <dependency>
+     <groupId>org.deeplearning4j</groupId>
+     <artifactId>deeplearning4j-nlp</artifactId>
+     <version>${dl4j.version}</version>
+   </dependency>
+   <dependency>
+     <groupId>org.nd4j</groupId>
+     <artifactId>nd4j-native</artifactId> 
+     <version>${nd4j.version}</version>
+   </dependency>
+</dependencies>
+</project>
+
