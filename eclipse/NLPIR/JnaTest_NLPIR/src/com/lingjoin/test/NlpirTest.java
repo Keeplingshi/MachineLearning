@@ -12,15 +12,15 @@ import com.lingjoin.demo.NlpirMethod;
  */
 public class NlpirTest {
 	
-/*	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception{
 		NlpirTest t = new NlpirTest();
 		t.testFileProcess();
-	}*/
+	}
 	
-	@Test
+	//@Test
 	public void test()
 	{
-		String content="曾经有一份真挚的感情摆在我的面前我没有珍惜，等我失去的时候才追悔莫及，人间最痛苦的事莫过于此，你的剑在我的咽喉上刺下去吧，不用在犹豫了！如果上天能给我一次再来一次的机会，我会对哪个女孩说三个字：我爱你，如果非要在这份爱上加一个期限，我希望是一万年！";
+		String content="<content>曾经有一份真挚的感情摆在我的面前我没有珍惜，等我失去的时候才追悔莫及，人间最痛苦的事莫过于此，你的剑在我的咽喉上刺下去吧，不用在犹豫了！如果上天能给我一次再来一次的机会，我会对哪个女孩说三个字：我爱你，如果非要在这份爱上加一个期限，我希望是一万年！</content>";
 		String result=NlpirMethod.NLPIR_ParagraphProcess(content,0);
 		System.out.println(result.replace(" ", "\n"));
 	}
@@ -44,7 +44,7 @@ public class NlpirTest {
 	 */
 	//@Test
 	public void testFileProcess(){
-		double flag = NlpirMethod.NLPIR_FileProcess("test/source.txt", "test/result.txt", 1);
+		double flag = NlpirMethod.NLPIR_FileProcess("C:/Users/chenbin/Desktop/sougouCA.txt", "C:/Users/chenbin/Desktop/resultbig.txt", 0);
 		System.out.println(flag);
 	}
 
