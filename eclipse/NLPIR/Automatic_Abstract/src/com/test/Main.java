@@ -14,17 +14,17 @@ import com.test.WordKmeans.Classes;
 public class Main {
 	
 	public static void main(String[] args) {
-        Word2VEC vec = new Word2VEC();  
+
+       Word2VEC vec = new Word2VEC();  
         try {
 			vec.loadModel("D:/Data/vectorsSougou.bin");
-			//WordKmeans wordKmeans = new WordKmeans(vec.getWordMap(), Integer.parseInt(args[2]),Integer.parseInt(args[3]));  
-			WordKmeans wordKmeans=new WordKmeans(vec.getWordMap(), 50, 30);
+			//迭代200次，基本可以得到最优结果
+			WordKmeans wordKmeans=new WordKmeans(vec.getWordMap(), 50, 200);
 			Classes[] explain=wordKmeans.explain();
 			
 	        File fw = new File("D:/Data/vectorsSougouResult.txt");  
 	        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fw), "UTF-8"));  
 	          
-	        //explain.length is the classes number  
 	        for (int i = 0; i < explain.length; i++) {  
 	            List<Entry<String, Double>> result=explain[i].getMember();  
 	            StringBuffer buf = new StringBuffer();  
@@ -36,10 +36,10 @@ public class Main {
 	        }  
 	        bw.close();  
 			
-			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}  
+		} 
 	}
+	
 }
