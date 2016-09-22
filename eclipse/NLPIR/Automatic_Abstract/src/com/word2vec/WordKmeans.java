@@ -91,7 +91,7 @@ public class WordKmeans {
                 sum += (center[i] - value[i])*(center[i] - value[i]) ;  
             }
             return sum ;  
-        }  
+        }
   
         public void putValue(String word, double score) {  
             values.put(word, score);  
