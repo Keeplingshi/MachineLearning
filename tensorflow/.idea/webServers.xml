@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b6bad010-abda-40c0-9a33-c66c3f966c86" name="centos_tensorflow" url="http://192.168.254.128">
+        <fileTransfer host="192.168.254.128" port="22" rootFolder="/tmp/python" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
