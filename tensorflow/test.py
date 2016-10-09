@@ -1,6 +1,7 @@
 import tensorflow as tf
 import tensorflow.examples.tutorials.mnist.input_data as input_data
 
+# 为获取训练集与测试集数据
 mnist = input_data.read_data_sets("./MNIST/", one_hot=True)
 x = tf.placeholder("float", [None, 784])
 W = tf.Variable(tf.zeros([784, 10]))
