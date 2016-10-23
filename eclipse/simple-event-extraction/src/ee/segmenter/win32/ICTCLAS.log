@@ -1,0 +1,6 @@
+Default Path : ./src/ee/segmenter/win32/
+start lic check.
+License succeed!Cannot open user dictionary ./src/ee/segmenter/win32/\Data\UserDict.pdat.
+Cannot open file ./src/ee/segmenter/win32/\Data\UserDict.map.
+Cannot open user dictionary ./src/ee/segmenter/win32/\Data\UserDict.pos.
+Load dictionary down!
