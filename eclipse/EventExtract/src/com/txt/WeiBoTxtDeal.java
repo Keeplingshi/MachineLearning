@@ -12,30 +12,30 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Î¢²©ÎÄ±¾Ô¤´¦Àí
+ * å¾®åšæ–‡æœ¬é¢„å¤„ç†
  * @author chenbin
  *
  */
 public class WeiBoTxtDeal {
 	
-	//URLÕıÔò±í´ïÊ½
+	//URLæ­£åˆ™è¡¨è¾¾å¼
     public static Pattern URL_Pattern = Pattern.compile("(http://|ftp://|https://|www){0,1}[^\u4e00-\u9fa5\\s]*?\\.(com|net|cn|me|tw|fr)[^\u4e00-\u9fa5\\s]*"); 
-    //@ÓÃ»§ ÕıÔò±í´ïÊ½
+    //@ç”¨æˆ· æ­£åˆ™è¡¨è¾¾å¼
     public static Pattern AT_PATTERN = Pattern.compile("@[\\u4e00-\\u9fa5\\w\\-]+");
 	
 	/**
-	 * ÎÄ±¾´¦Àí£¬È¥³ıÔëÉù
-	 * @param originPath Ô´ÎÄ¼ş
-	 * @param outputPath Êä³öÎÄ¼ş
+	 * æ–‡æœ¬å¤„ç†ï¼Œå»é™¤å™ªå£°
+	 * @param originPath æºæ–‡ä»¶
+	 * @param outputPath è¾“å‡ºæ–‡ä»¶
 	 */
 	public static void weiboTxtDeal(String originPath,String outputPath)
 	{
         Matcher matcher=null;
 		
-        //¶ÁÈëÎÄ¼ş
+        //è¯»å…¥æ–‡ä»¶
 		File file = null;
 		BufferedReader br=null;
-		//Ğ´ÈëÎÄ¼ş
+		//å†™å…¥æ–‡ä»¶
 		FileWriter writer=null;
 		
 		try {
@@ -49,28 +49,28 @@ public class WeiBoTxtDeal {
 				String[] lineArr=lineTxt.split("\t");
 				if(lineArr.length==25)
 				{
-					//»ñÈ¡µ±Ç°¾ä
+					//è·å–å½“å‰å¥
 					String str=lineArr[18];
 
-					//º¬ÓĞURLµÄ
+					//å«æœ‰URLçš„
 			        matcher = URL_Pattern.matcher(str);
 			        if(matcher.find()){
 			        	continue;
 			        }
-			        //@ÓÃ»§µÄ
+			        //@ç”¨æˆ·çš„
 			        matcher=AT_PATTERN.matcher(str);
 			        if(matcher.find()){
 			        	continue;
 			        }
-			        //É¾³ıstrÖĞµÄ±íÇé£¬¼´ÖĞÀ¨ºÅÀ¨ÆğÀ´µÄ[]
+			        //åˆ é™¤strä¸­çš„è¡¨æƒ…ï¼Œå³ä¸­æ‹¬å·æ‹¬èµ·æ¥çš„[]
 			        str=str.replaceAll("\\[([^\\[\\]]+)\\]", "");
-			        //É¾³ıÎ¢²©ÖĞµÄ»°Ìâ
+			        //åˆ é™¤å¾®åšä¸­çš„è¯é¢˜
 			        str=str.replaceAll("#([^\\#|.]+)#", "");
-			        //É¾³ı×ª·¢Î¢²©£¬·ÖÏíÍ¼Æ¬
-			        str=str.replaceAll("×ª·¢Î¢²©", "");
-			        str=str.replaceAll("·ÖÏíÍ¼Æ¬", "");
+			        //åˆ é™¤è½¬å‘å¾®åšï¼Œåˆ†äº«å›¾ç‰‡
+			        str=str.replaceAll("è½¬å‘å¾®åš", "");
+			        str=str.replaceAll("åˆ†äº«å›¾ç‰‡", "");
 					
-					//É¸Ñ¡µô×ÖÊıÌ«ÉÙµÄ£¬ÉÙÓÚ10¸öºº×ÖµÄ£¬
+					//ç­›é€‰æ‰å­—æ•°å¤ªå°‘çš„ï¼Œå°‘äº10ä¸ªæ±‰å­—çš„ï¼Œ
 					if(str.length()<10)
 					{
 						continue;
@@ -79,7 +79,7 @@ public class WeiBoTxtDeal {
 					writer.write(str+"\r\n");
 				}
 			}
-			System.out.println("´¦Àí½áÊø\t");
+			System.out.println("å¤„ç†ç»“æŸ\t");
 			
             writer.flush();
             writer.close();
