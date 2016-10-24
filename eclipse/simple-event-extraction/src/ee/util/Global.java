@@ -26,7 +26,7 @@ public abstract class Global {
 	public static final String PLATFORM;
 
 	static {
-		//PLATFORM = WIN64;
+		//PLATFORM = WIN32;
 		Properties pros = System.getProperties();
 		String arch = pros.get("os.arch").toString();
 		if (arch.equals("x86"))
