@@ -62,7 +62,6 @@ public class PreProcess {
 	 */
 	public static Set<String> getTreeSet() {
 		String path = FileUtil.getRootPath("") + ReadConfigFile.getValue("denoter");// 获取存放所有触发词的文件路径
-		System.out.println(path);
 		MyLogger.logger.info(path);
 		Set<String> treeSet = new TreeSet<String>();
 		BufferedReader br = null;
