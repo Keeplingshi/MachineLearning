@@ -52,7 +52,7 @@ public class FileUtil {
 					if(strArray.length==1){
 						System.out.println(lineTxt);
 					}else{
-						Set<String> set = new HashSet<String>(Arrays.asList(strArray));
+						//Set<String> set = new HashSet<String>(Arrays.asList(strArray));
 					}
 				}
 				read.close();
