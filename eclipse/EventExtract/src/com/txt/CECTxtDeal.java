@@ -1,7 +1,9 @@
 package com.txt;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -15,6 +17,29 @@ import org.dom4j.io.SAXReader;
  */
 public class CECTxtDeal {
 
+	/**
+	 * 将处理的触发词语料写入文档
+	 * @param denoterMap 触发词
+	 * @param denoterFile 触发词文档
+	 */
+	public static void cecDenoter(HashMap<String, List<String>> denoterMap,String denoterFile)
+	{
+		StringBuffer content = new StringBuffer();
+		Iterator<String> iterator = denoterMap.keySet().iterator();  
+		while (iterator.hasNext()){
+			
+			String key=(String)iterator.next();
+			List<String> list=denoterMap.get(key);
+			
+		}
+		
+	}
+	
+	/**
+	 * 获取CEC语料触发词
+	 * @param xmlFolderPath
+	 * @param denoterTxt
+	 */
 	public static void getDenoter(String xmlFolderPath,String denoterTxt)
 	{
 		File xmlFolder=new File(xmlFolderPath);

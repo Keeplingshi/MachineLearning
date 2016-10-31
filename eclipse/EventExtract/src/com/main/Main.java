@@ -1,6 +1,10 @@
 package com.main;
 
+import java.util.HashMap;
+import java.util.List;
+
 import com.txt.CECTxtDeal;
+import com.txt.FileUtil;
 
 public class Main {
 
@@ -13,9 +17,9 @@ public class Main {
 		
 		String xmlFolderPath=projectRootPath+"/corpous/CEC_Train_Corpous/";
 		String denoterTxt=projectRootPath+"/corpous/CEC_Train_Corpous/denoter.txt";
-		CECTxtDeal.getDenoter(xmlFolderPath, denoterTxt);
+		//CECTxtDeal.getDenoter(xmlFolderPath, denoterTxt);
 //		
-//		FileUtil.orderTxtFile(denoterTxt, "UTF-8");
+		HashMap<String, List<String>> denoterMap=FileUtil.orderTxtFile(denoterTxt, "UTF-8");
 		
 	}
 
