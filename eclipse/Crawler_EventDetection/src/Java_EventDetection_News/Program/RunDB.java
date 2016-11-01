@@ -191,14 +191,14 @@ public class RunDB
 		while(true)
 		{
 			RunDB runing = 
-					new RunDB("root", "root", "jdbc:mysql://localhost/webnews","cue.csv");
+					new RunDB("root", "root", "jdbc:mysql://localhost:3306/webnews","E:/Github/MachineLearning/eclipse/Crawler_EventDetection/src/cue.csv");
 			runing.detectEvent(numbers);
 			Thread.sleep(24*3600*1000);
 			++updateDic;
 			if(updateDic == 7)
 			{
 				updateDic = 0;
-				runing.detec.updateDictionary("root", "root", "jdbc:mysql://localhost/webnews",lastUpdateTime);
+				runing.detec.updateDictionary("root", "root", "jdbc:mysql://localhost:3306/webnews",lastUpdateTime);
 				lastUpdateTime = new Date();
 			}
 		}

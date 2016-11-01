@@ -12,16 +12,11 @@
 * 
 */
 package Java_EventDetection_News.RoleExtract;
-import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 
 import Java_EventDetection_News.Ner.NerExtract;
 
@@ -48,15 +43,15 @@ public class News_Log_Methods{
 	
 	public News_Log_Methods(String sqlURL,String sqlUser,String sqlPasswd) 
 	{
-		this.sqlURL = sqlURL;
-		this.sqlUser = sqlUser;
-		this.sqlPasswd = sqlPasswd;
+		News_Log_Methods.sqlURL = sqlURL;
+		News_Log_Methods.sqlUser = sqlUser;
+		News_Log_Methods.sqlPasswd = sqlPasswd;
 		linkDatabase();
 	}
 	
 	private static void linkDatabase() 
 	{
-		System.out.println("wqe");	
+		System.out.println("连接到数据库，开始初始化各个值。");	
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(sqlURL,sqlUser,sqlPasswd);
@@ -101,7 +96,7 @@ public class News_Log_Methods{
 	 * @throws SQLException
 	 * @throws ParseException
 	 */
-	public static void newstolog(String newsSource,String newsID,String newsInput,String newsTime) throws SQLException, ParseException{
+	public void newstolog(String newsSource,String newsID,String newsInput,String newsTime) throws SQLException, ParseException{
 		System.out.println("newsSource:"+newsSource);
 	    System.out.println("newsID:"+newsID);
 	    System.out.println("newsTitle:"+newsInput);

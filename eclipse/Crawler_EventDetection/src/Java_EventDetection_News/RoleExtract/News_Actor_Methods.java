@@ -15,7 +15,7 @@ public class News_Actor_Methods {
 	private Connection connection;
 	public String sqlURL = "jdbc:mysql://localhost:3306/webnews";
 	public String sqlUser = "root";
-	public String sqlPasswd = "123456";
+	public String sqlPasswd = "root";
 	PreparedStatement pStmt[]=new PreparedStatement[6];
 	String news_tables []= {"huanqiu_china","huanqiu_world","fenghuang","xinhua","xinhua_world","xinlang"};
 
@@ -29,7 +29,7 @@ public class News_Actor_Methods {
 	
 	private void linkDatabase() 
 	{
-		System.out.println("wqe");	
+		System.out.println("News_Actor_Methods");	
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 //			System.out.println("Driver loaded");

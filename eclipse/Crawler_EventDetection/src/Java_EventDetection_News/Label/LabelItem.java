@@ -54,6 +54,26 @@ public class LabelItem
 		this.eventTime = eventTime;
 		this.eventLocation = eventLocation;
 	}
+
+	public String toDemoString()
+	{
+		if (this.ifEvent == false)
+			return this.newsTitle+"\nNot event related.";
+		else
+			return this.newsTitle+
+				"\nEventType: "+this.eventType+
+				"\nSource: "+this.sourceActor+
+				"\nTrigger:	"+this.triggerWord+
+				"\nTarget: "+this.targetActor+
+				"\nLocation: "+this.eventLocation+
+				"\nTime: "+this.eventTime;
+	}
+	
+	public String toString()
+	{
+		return this.labelID+this.newsSource+" "+this.newsID+" " +this.newsTitle;
+	}
+	
 	public void Print()
 	{
 		System.out.println("labelID "+labelID);
@@ -68,23 +88,4 @@ public class LabelItem
 		System.out.println("eventTime "+eventTime);
 		System.out.println("eventLocation "+eventLocation);
 	}
-	public String toDemoString()
-	{
-		if (this.ifEvent == false)
-			return this.newsTitle+
-					"\nNot event related.";
-		else
-			return this.newsTitle+
-				"\nEventType: "+this.eventType+
-				"\nSource: "+this.sourceActor+
-				"\nTrigger:	"+this.triggerWord+
-				"\nTarget: "+this.targetActor+
-				"\nLocation: "+this.eventLocation+
-				"\nTime: "+this.eventTime;
-	}
-	public String toString()
-	{
-		return this.labelID+this.newsSource+" "+this.newsID+" " +this.newsTitle;
-	}
-	
 }

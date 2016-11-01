@@ -28,20 +28,18 @@ public class TriggerController
 	public String templateFilePath;
 	public TriggerTemplate template;
 
-//	public TriggerController(HashMap<String,int[]> map)
-//	{
-//		this.template = new TriggerTemplate(map);
-//	}
 	public TriggerController(String filePath)
 	{
 		//this(TriggerController.getMapfromFile(filePath));
 		this.templateFilePath = filePath;
 		this.template = new TriggerTemplate(TriggerController.getMapfromFile(filePath));
 	}
+	
 	public TriggerTemplate getTemplate()
 	{
 		return this.template;
 	}
+	
 	public String setEventType(String newsID,String[]newsWords,LabelItem result)
 	{
 		if(result == null || newsWords == null || this.template == null)
@@ -194,7 +192,7 @@ public class TriggerController
 //		
 //		HashMap<String,int[]> tempMap = TriggerController.getTrainingData(trainingData);
 //		//TriggerController testController = new TriggerController(tempMap);
-		TriggerController testController = new TriggerController("cue.csv");
+		TriggerController testController = new TriggerController("E:/Github/MachineLearning/eclipse/Crawler_EventDetection/src/cue.csv");
 		
 		System.out.println(testController.template);
 //		System.out.println(testController.template.getEventType("干"));

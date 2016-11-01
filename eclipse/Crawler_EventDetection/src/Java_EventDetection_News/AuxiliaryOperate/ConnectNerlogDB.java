@@ -117,7 +117,7 @@ public class ConnectNerlogDB {
 	}
 	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
-		ConnectNerlogDB nc = new ConnectNerlogDB("root","123456","jdbc:mysql://114.212.190.58/webnews");
+		ConnectNerlogDB nc = new ConnectNerlogDB("root","root","jdbc:mysql://localhost:3306/webnews");
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println(format.format(date));

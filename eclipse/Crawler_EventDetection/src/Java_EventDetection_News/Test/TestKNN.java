@@ -1,3 +1,5 @@
+package Java_EventDetection_News.Test;
+
 /*  
 * 创建时间：2015年12月7日 下午7:58:42  
 * 项目名称：Java_EventDetection_News  
@@ -9,7 +11,6 @@
 * 类说明：  
 * 功能描述：
 */
-package Java_EventDetection_News.Test;
 
 import java.io.File;
 import java.io.IOException;
