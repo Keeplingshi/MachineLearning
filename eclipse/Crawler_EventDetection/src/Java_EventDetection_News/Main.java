@@ -18,7 +18,7 @@ public class Main {
 		String newsSource = "xinhua";
 		String newsID = "1";
 		String newsTime = "2015年5月1日";
-		String newsTitle = "BBC称英国原本可搭纳粹火箭上太空：比美早十年";
+		String newsTitle = "孟建柱于2016年4月在北京会见哈萨克斯坦总统助理兼安全会议秘书叶尔梅克巴耶夫。";
 		
 		LabelItem extractResult = runDetection.GetEventInforfromNews(newsSource, newsID, newsTime, newsTitle);
 		extractResult.Print();

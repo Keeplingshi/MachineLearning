@@ -25,12 +25,12 @@ public class TestKNN
 {
 	public static void main(String []args) throws IOException
 	{
-		Dataset data = FileHandler.loadDataset(new File("iris.data"), 4, ",");
+		Dataset data = FileHandler.loadDataset(new File("E:/Github/MachineLearning/eclipse/Crawler_EventDetection/src/iris.data"), 4, ",");
 		 /* Contruct a KNN classifier that uses 5 neighbors to make a
 		  *decision. */
 		Classifier knn = new KNearestNeighbors(5);
 		knn.buildClassifier(data);
-		Dataset dataForClassification = FileHandler.loadDataset(new File ("iris.data"), 4, ",");
+		Dataset dataForClassification = FileHandler.loadDataset(new File ("E:/Github/MachineLearning/eclipse/Crawler_EventDetection/src/iris.data"), 4, ",");
 		/* Counters for correct and wrong predictions. */
 		int correct = 0, wrong = 0;
 		/* Classify all instances and check with the correct class values */
