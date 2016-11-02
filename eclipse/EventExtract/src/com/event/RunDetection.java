@@ -14,6 +14,7 @@ import com.event.trigger.TriggerController;
 
 /**
  * 抽取文本中事件信息，放入LabelItem
+ * 
  * @author chenbin
  *
  */
@@ -24,7 +25,7 @@ public class RunDetection {
 	public Trigger_Role tr;
 
 	/**
-	 * 构造函数，初始化数据库
+	 * 构造函数，初始化命名体识别
 	 */
 	public RunDetection() {
 		ne = new NerExtract();
@@ -63,17 +64,15 @@ public class RunDetection {
 	}
 
 	/**
-	 * 触发词词典中没有匹配 从新闻标题中，通过词性标注工具找到最有可能是触发词的动词作为返回 for QianF
+	 * 触发词词典中没有匹配 从句子中，通过词性标注工具找到最有可能是触发词的动词作为返回
 	 */
-	public String findTriggerVerb(String newsInput)
-	{
+	public String findTriggerVerb(String newsInput) {
 		/*
 		 * 1、判断是否有动词，如果没有return null 2、如果只有一个动词，那好办 3、如果有多个动词，默认最后一个
 		 */
 		List<Pair<String, Integer>> result = ne.getN_V(newsInput);
 		List<Pair<String, Integer>> nv = new ArrayList<>();
-		for (Pair<String, Integer> re : result) 
-		{
+		for (Pair<String, Integer> re : result) {
 			if (re.getValue() == 1)// 动词：1
 			{
 				nv.add(re);
@@ -87,8 +86,8 @@ public class RunDetection {
 
 		return triggerVerb;
 	}
-	
-	public void setActor(String text, String triggerWord,LabelItem result) {
+
+	public void setActor(String text, String triggerWord, LabelItem result) {
 		String[] temp = new String[2];
 		if (text != null || "".equals(text)) {
 
@@ -109,23 +108,17 @@ public class RunDetection {
 	 * @throws SQLException
 	 * @throws ParseException
 	 */
-	public LabelItem GetEventInforfromText(String eventStr)
-			throws SQLException, ParseException// 新闻标题数据库ID，数据库中新闻发布时间，新闻标题内容
-	{
+	public LabelItem GetEventInforfromText(String eventStr) throws SQLException, ParseException {
 		LabelItem result = new LabelItem(eventStr);// 标注结果存储对象
 		List<Pair<String, String>> nerResult = ne.nerResult(eventStr);
 		List<Pair<String, String>> tagResult = ne.tagResult(eventStr);
 		String[] segWords = this.ne.segResult(eventStr).split(" ");// 分词结果
-		
-		// if(QianF.isEventRelated(newsID,newsTitle)==false)return
-		// result;//二分类，判断新闻文本是否是军事政治新闻
 
 		result.ifEvent = true;
 		this.setTimeandLocation(nerResult, tagResult, result);
 
 		String triggerWord = this.templateController.setEventType(segWords, result);
-		if (result.eventType == -1)
-		{
+		if (result.eventType == -1) {
 			result.ifEvent = false;
 		}
 
