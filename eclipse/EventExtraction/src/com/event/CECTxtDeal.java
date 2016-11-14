@@ -1,7 +1,10 @@
 package com.event;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Iterator;
@@ -21,84 +24,82 @@ import com.util.FileUtil;
 
 public class CECTxtDeal {
 
-	public static void test(String path)
+	private static String REG_XMLNODE="<.*?>";
+	
+	/**
+	 * 将CEC语料中的文本提取出来
+	 * @param path
+	 * @param txtPath
+	 */
+	public static void cecCorpousExtract(String path,String txtPath)
 	{
 		File xmlFolder=new File(path);
+		FileWriter writer=null;
 		
 		if(xmlFolder.isDirectory()){
-			for(File folder:xmlFolder.listFiles())
-			{
-				if(folder.isDirectory())
+			try {
+				writer = new FileWriter(txtPath);
+				
+				for(File folder:xmlFolder.listFiles())
 				{
-					for(File xml:folder.listFiles())
+					if(folder.isDirectory())
 					{
-						cecXmlToExcel(xml);
+						for(File xml:folder.listFiles())
+						{
+							//读出每一个xml中的文本内容，写入txt中
+							String xmlStr=xmlToStr(xml);
+							writer.write(xmlStr+"\r\n");
+							
+						}
 					}
 				}
+				
+				writer.flush();
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		}
 		
 	}
 	
-	public static StringBuffer cecXmlToExcel(File xml)
+	/**
+	 * 读取xml中内容，以字符串形式返回
+	 * @param xml
+	 * @return
+	 */
+	public static String xmlToStr(File xml)
 	{
-		SAXReader saxReader = new SAXReader();
-		try {
-			Document document = saxReader.read(xml);
-			
-			Element root = document.getRootElement();
-			Element content_element=root.element("Content");
-			Iterator<?> paragraph_iterator=content_element.elementIterator("Paragraph");
-			
-			while(paragraph_iterator.hasNext())
-			{
-				Element paragraph_element = (Element) paragraph_iterator.next();
-				Iterator<?> sentence_iterator=paragraph_element.elementIterator("Sentence");
-				while(sentence_iterator.hasNext())
-				{
-					Element sentence_element = (Element) sentence_iterator.next();
-					Iterator<?> event_iterator=sentence_element.elementIterator("Event");
-					while(event_iterator.hasNext())
-					{
-						Element event_element = (Element) event_iterator.next();
-						List<?> list=event_element.content();
-						
-						StringBuffer sentenceBuffer=new StringBuffer();
-						for(Object object:list)
-						{
-							try {
-								Element element=(Element)object;
-								String elementStr=element.getData().toString();
-
-								if("Participant".equals(element.getName())){
-									
-								}else if("Time".equals(element.getName())){
-									
-								}else if("Location".equals(element.getName())){
-									
-								}else if("Denoter".equals(element.getName())){
-									
-								}else if("Object".equals(element.getName())){
-									
-								}
-								
-								sentenceBuffer.append(elementStr);
-							} catch (Exception e) {
-								DefaultText defaultText=(DefaultText)object;
-								sentenceBuffer.append(defaultText.getText().replaceAll("\r|\n|\t", ""));
-							}
-						}
-
-					}
-					
-				}
-				
-			}
-			
-		} catch (DocumentException e) {
-			
-		}
-		return null;
+        BufferedReader reader = null;
+        String xmlStr=null;
+        try {
+        	StringBuffer xmlContent=new StringBuffer();
+            reader = new BufferedReader(new FileReader(xml));
+            String tempString = null;
+            // 一次读入一行，直到读入null为文件结束
+            while ((tempString = reader.readLine()) != null) {
+            	if(tempString.contains("</Title>")||tempString.contains("</ReportTime>"))
+            	{
+            		continue;
+            	}
+            	xmlContent.append(tempString);
+            }
+            
+            xmlStr=xmlContent.toString().replaceAll(REG_XMLNODE, "").replaceAll("\r|\n|\t", "").replaceAll(" ", "");
+            
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e1) {
+                }
+            }
+        }
+		
+        return xmlStr;
 	}
 	
 	/**

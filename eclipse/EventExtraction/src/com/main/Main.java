@@ -14,8 +14,9 @@ public class Main {
 		String projectRootPath=System.getProperty("user.dir");
 //		
 		String xmlFolderPath=projectRootPath+"/corpous/CEC_Train_Corpous/";
+		String cecCorpous=projectRootPath+"/corpous/CEC_Train_Corpous/cecCorpous.txt";
 //		
-		CECTxtDeal.cecXmlDeal(xmlFolderPath);
+		CECTxtDeal.cecCorpousExtract(xmlFolderPath,cecCorpous);
 		
 		
 		
@@ -33,19 +34,28 @@ public class Main {
 //		}
 		
 		
-//        String a = "<doc>abc<title>3232</title></doc><doc>ֻҪ����</doc>";  
-//        List list = getContext(a);  
-//        System.out.println(list);  
+//        String a = "<doc>abc<title>3232</title>156135</doc><doc>中国</doc>";  
+//        getContext(a);  
+        //System.out.println(list);  
 	}
 	
-//	public static List getContext(String html) {  
+	public static void getContext(String str) {
+
+        str=str.replaceAll("<.*?>", "");
+        System.out.println(str);
+//        while(m.find())
+//        {
+//            String tmp = m.group();
+//    		System.out.println(tmp);
+//        }
+        
 //        List resultList = new ArrayList();  
-//        Pattern p = Pattern.compile(">([\\S]+)</");//������ʽ commend by danielinbiti    >([\\S]+)</
+//        Pattern p = Pattern.compile("<[^>]+>");
 //        Matcher m = p.matcher(html );//  
 //        while (m.find()) {  
 //            resultList.add(m.group(1));//  
 //        }  
 //        return resultList;  
-//    }  
+    }  
 //	
 }
