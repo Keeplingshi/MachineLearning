@@ -30,6 +30,8 @@ public class RunDetection {
 	public RunDetection() {
 		ne = new NerExtract();
 		tr = new Trigger_Role();
+		
+		this.LoadTemplateController("cue.csv");
 	}
 
 	/**
@@ -52,12 +54,6 @@ public class RunDetection {
 	 */
 	public void setTimeandLocation(List<Pair<String, String>> nerResult, List<Pair<String, String>> tagResult,
 			LabelItem labelresult) {
-		/*
-		 * 1、只有一个时间、一个地点好办 2、多个时间，选择第一个 3、多个地点，选择1、p+ns 2、nr/nt + ns 3、ns + n
-		 */
-		// List<Pair<String,String>> nerResult = ne.nerResult(newsInput);
-		// List<Pair<String,Integer>> nvResult = ne.getN_V(newsInput);
-		// List<Pair<String,String>> tagResult = ne.tagResult(newsInput);
 		labelresult.eventTime = GetTimeAndLocation.getTime(nerResult);
 		labelresult.eventLocation = GetTimeAndLocation.getLocation(tagResult);
 
@@ -96,6 +92,7 @@ public class RunDetection {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
 		}
 		result.sourceActor = temp[0];
 		result.targetActor = temp[1];

@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01bb4a45-4611-45fc-ad1d-9aa78a51bb23" name="Default" comment="实验二">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Main.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Test.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/txt/TxtDeal.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/txt/TxtDeal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/MachineLearning.iml" afterPath="$PROJECT_DIR$/../python/.idea/MachineLearning.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/misc.xml" afterPath="$PROJECT_DIR$/../python/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../python/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/misc.xml" afterPath="$PROJECT_DIR$/../python/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/txt/TxtDeal.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/txt/TxtDeal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Test.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../python/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Main.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/MachineLearning.iml" afterPath="$PROJECT_DIR$/../python/.idea/MachineLearning.iml" />
     </list>
     <ignored path="tensorflow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,10 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -214,6 +210,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -573,7 +573,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21495327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="725" y="210" width="469" height="620" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="725" y="210" width="469" height="620" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -990,6 +990,6 @@
     </entry>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAoFH8f7QQC1xlGbyXeBzIHB0dU/Bir5SQ4RYMb8ZEx9oMe0G9tW+eCX/MzbGpaQ2LclI4SI1TfgRaLS63w4Aoo/QurNmdap7wiouV07hDwg9BeMGnbH6pIx66j0KbrT4W4Vx8canRQstyDtYc6cYpPvuvDVfH67zbYVc83dpsNivUOyv1PDMkmAM5XAOSkM0aCZjtfG6dOQ+1AwyG/BKblYTjjQ4zJGjnTBS5OR0AcA9g</data>
+    <data>AAAAoNelp8QLMMKw+YI0xlcZ6CtcpJiGneR29ILdeXRJ55JvyBA18sU6g45kcXVmtTtpKhk8Uv2J3KxUQSmQzbfnw2FlJl0CCkEgSG/X/2l+AaYmG42w+R5SvtOIKbaYPMCVdBl5efNXkTlWSg+L1eaP0AFNdwpB+jrknZjG3TAnbKr+mtRfGj+DOwL+ERTrVSl5XAGshGj7OIx3Tz/q+4ZgxDDCxW4s2fMNoQOKTFoeZUS0</data>
   </component>
 </project>
