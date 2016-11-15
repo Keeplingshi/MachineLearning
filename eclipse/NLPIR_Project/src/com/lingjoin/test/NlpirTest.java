@@ -20,15 +20,15 @@ public class NlpirTest {
 	@Test
 	public void test()
 	{
-		String content="<content>曾经有一份真挚的感情摆在我的面前我没有珍惜，等我失去的时候才追悔莫及，人间最痛苦的事莫过于此，你的剑在我的咽喉上刺下去吧，不用在犹豫了！如果上天能给我一次再来一次的机会，我会对哪个女孩说三个字：我爱你，如果非要在这份爱上加一个期限，我希望是一万年！</content>";
-		String result=NlpirMethod.NLPIR_ParagraphProcess(content,0);
-		System.out.println(result.replace(" ", "\n"));
+		String content="曾经有一份真挚的感情摆在我的面前我没有珍惜，等我失去的时候才追悔莫及，人间最痛苦的事莫过于此，你的剑在我的咽喉上刺下去吧，不用在犹豫了！如果上天能给我一次再来一次的机会，我会对哪个女孩说三个字：我爱你，如果非要在这份爱上加一个期限，我希望是一万年！";
+		String result=NlpirMethod.NLPIR_ParagraphProcess(content,1);
+		System.out.println(result);
 	}
 	
 	/**
 	 * 测试文本分词
 	 */
-	@Test
+	//@Test
 	public void testParagraphProcess(){
 		String content = "据俄罗斯卫星网8月11日发布美国《国家利益》杂志刊登的文章称，中国购买俄制苏-27第四代战机，为本国空军翻开了现代史的页章。" +
 				"从那时起，中国空军日益强大。中国空军长期以来落后于像美国这样的世界大国，从2008年起中国开始研制堪舆美国F-22猛禽战机和F-35闪电-II相媲美的第五代战机J-20和J-31，" +
