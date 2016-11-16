@@ -1,13 +1,11 @@
 package com.feng.fresh.test;
 
-import com.feng.fresh.tools.FileUtils;
-import com.feng.fresh.train.TriggerScorePre;
+import java.io.File;
+
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.File;
-
-import static org.junit.Assert.*;
+import com.feng.fresh.tools.FileUtils;
 
 /**
  * Created by feng on 2016/9/11.

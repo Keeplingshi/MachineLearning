@@ -39,7 +39,7 @@ public class SampWordParse {
                if(tokens.length == 2){
                     String label = tokens[0].substring(0,LABEL_LEN);
                     String[] strs = tokens[1].trim().split("(\\s)+");
-                   List list = label2wordMap.get(label);
+                   List<String> list = label2wordMap.get(label);
                    for(String str : strs){
                        if(null == list){
                            list = Lists.newArrayList();

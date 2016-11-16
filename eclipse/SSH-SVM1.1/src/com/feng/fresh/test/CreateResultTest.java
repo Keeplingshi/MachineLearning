@@ -1,13 +1,11 @@
 package com.feng.fresh.test;
 
+import java.io.File;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.feng.fresh.tools.FileUtils;
-
-import java.io.File;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by feng on 2016/9/12.

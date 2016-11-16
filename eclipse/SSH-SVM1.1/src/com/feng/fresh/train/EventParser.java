@@ -1,18 +1,17 @@
 package com.feng.fresh.train;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.feng.fresh.lineprocessor.EventProcessor;
-import com.feng.fresh.model.Event;
 import com.feng.fresh.model.EventEnum;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 import com.google.common.io.LineProcessor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by feng on 2016/8/25.

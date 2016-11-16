@@ -12,6 +12,9 @@ import java.util.Map;
  */
 public class FileUtils {
 
+	/**
+	 * 语料路径
+	 */
 	public static final String corpousPath=System.getProperty("user.dir")+"/data/";;
 	
     static final Logger LOGGER = LoggerFactory.getLogger(FileUtils.class);

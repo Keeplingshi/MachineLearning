@@ -1,16 +1,24 @@
 package com.feng.fresh.test;
 
-import com.feng.fresh.model.EventEnum;
-import com.feng.fresh.tools.StringUtils;
-import com.feng.fresh.train.TriggerScorePre;
-import com.google.common.base.Splitter;
-import com.google.common.collect.Maps;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Map;
+import java.util.regex.Pattern;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
-import java.util.*;
-import java.util.regex.Pattern;
+import com.feng.fresh.model.EventEnum;
+import com.feng.fresh.tools.StringUtils;
+import com.google.common.base.Splitter;
+import com.google.common.collect.Maps;
 
 /**
  * Created by feng on 2016/9/12.

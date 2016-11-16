@@ -3,6 +3,8 @@ package com.feng.fresh.train;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.feng.fresh.tools.FileUtils;
+
 import java.io.File;
 
 /**
@@ -12,7 +14,9 @@ public class TriggerScordTest {
 
     @Test
     public void splitSentence(){
-        String path = this.getClass().getClassLoader().getResource("seq/train-seq.txt").getPath();
+    	
+    	String path=FileUtils.corpousPath+"/seq/train-seq.txt";
+        //String path = this.getClass().getClassLoader().getResource("seq/train-seq.txt").getPath();
         File file = new File(path);
         Assert.assertTrue(null!=file && file.exists());
         TriggerScorePre.splitSentece(file);

@@ -1,20 +1,18 @@
 package com.feng.fresh.lineprocessor;
 
-import com.feng.fresh.model.Event;
-import com.feng.fresh.model.EventEnum;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.io.LineProcessor;
-import org.apache.commons.lang3.StringUtils;
-
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
+
+import com.feng.fresh.model.EventEnum;
+import com.google.common.collect.Maps;
+import com.google.common.io.LineProcessor;
+
 /**
- * 获取没行中的触发次
+ * 获取每行中的触发词
  * Created by feng on 2016/8/25.
  */
 public class EventProcessor implements LineProcessor<Map<EventEnum, Map<String, Integer>>>{
