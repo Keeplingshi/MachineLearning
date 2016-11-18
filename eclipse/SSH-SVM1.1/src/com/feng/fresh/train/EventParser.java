@@ -28,6 +28,7 @@ public class EventParser {
 
         if(null==file || !file.exists())  return null;
 
+        System.out.println(file.getName()+"===========================");
         LOGGER.debug("开始处理文件：{}", file.getName());
         LineProcessor<Map<EventEnum, Map<String, Integer>>> linePorcessor = new EventProcessor();
         try {

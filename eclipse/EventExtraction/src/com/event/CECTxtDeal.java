@@ -49,7 +49,6 @@ public class CECTxtDeal {
 							//读出每一个xml中的文本内容，写入txt中
 							String xmlStr=xmlToStr(xml);
 							writer.write(xmlStr+"\r\n");
-							
 						}
 					}
 				}
@@ -85,7 +84,8 @@ public class CECTxtDeal {
             	xmlContent.append(tempString);
             }
             
-            xmlStr=xmlContent.toString().replaceAll(REG_XMLNODE, "").replaceAll("\r|\n|\t", "").replaceAll(" ", "");
+            xmlStr=xmlContent.toString().replaceAll("\r|\n|\t", "");
+            //xmlStr=xmlContent.toString().replaceAll(REG_XMLNODE, "").replaceAll("\r|\n|\t", "").replaceAll(" ", "");
             
             reader.close();
         } catch (IOException e) {

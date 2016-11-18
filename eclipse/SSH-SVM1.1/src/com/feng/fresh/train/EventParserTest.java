@@ -22,7 +22,9 @@ public class EventParserTest {
     @Test
     public void parseEvent() throws Exception {
 
+    	
     	String path=FileUtils.corpousPath+"/train/train-arg.txt";
+    	System.out.println(path);
        // String path = this.getClass().getClassLoader().getResource("train/train-arg.txt").getPath();
         File file = new File(path);
         Assert.assertTrue(null!=file && file.exists());
@@ -37,6 +39,7 @@ public class EventParserTest {
     public void parseTestCorpusEvent() throws Exception {
 
     	String path=FileUtils.corpousPath+"/train/test-arg.txt";
+    	System.out.println(path);
         //String path = this.getClass().getClassLoader().getResource("train/test-arg.txt").getPath();
         File file = new File(path);
         Assert.assertTrue(null!=file && file.exists());

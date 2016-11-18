@@ -15,6 +15,7 @@ public class TriggerScordTest {
     @Test
     public void splitSentence(){
     	
+    	//String path=FileUtils.corpousPath+"/cec/CEC_Train_Corpous/cecResult.txt";
     	String path=FileUtils.corpousPath+"/seq/train-seq.txt";
         //String path = this.getClass().getClassLoader().getResource("seq/train-seq.txt").getPath();
         File file = new File(path);
