@@ -9,9 +9,9 @@ public class Main {
 
 		String projectRootPath=System.getProperty("user.dir")+"/corpous/cec/";
 ////		
-		String xmlFolderPath=projectRootPath+"/CEC_Train_Corpous/";
-		String cecCorpous=projectRootPath+"/CEC_Train_Corpous/cecCorpous.txt";
-		String sResultFilename=projectRootPath+"/CEC_Train_Corpous/cecResult.txt";
+		String xmlFolderPath=projectRootPath+"/CEC_Test_Corpous/";
+		String cecCorpous=projectRootPath+"/CEC_Train_Corpous/cecTestCorpous.txt";
+		String sResultFilename=projectRootPath+"/CEC_Train_Corpous/cecTestResult.txt";
 		
 ////		
 		CECTxtDeal.cecCorpousExtract(xmlFolderPath,cecCorpous);
@@ -21,7 +21,7 @@ public class Main {
 //		System.out.println(result);
 		
 		
-		//NlpirMethod.NLPIR_FileProcess(cecCorpous, sResultFilename, 1);
+		NlpirMethod.NLPIR_FileProcess(cecCorpous, sResultFilename, 1);
 		
 //		String denoterTxt=projectRootPath+"/corpous/CEC_Train_Corpous/denoter.txt";
 //		CECTxtDeal.getDenoter(xmlFolderPath, denoterTxt);

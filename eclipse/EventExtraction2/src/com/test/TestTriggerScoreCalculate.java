@@ -78,8 +78,7 @@ public class TestTriggerScoreCalculate {
         sentenceTotalNum = TriggerScorePre.getSentenceTotalNum();
         type2CounterMap = TriggerScorePre.getType2CounterMap();
 
-        String test_seq_path=System.getProperty("user.dir")+"/data/medicine/seq/test-seq.txt";
-        System.out.println("4\t"+test_seq_path);
+        String test_seq_path=System.getProperty("user.dir")+"/data/cec/CEC_Test_Corpous/cecTestResult.txt";
         File file = new File(test_seq_path);
         TestTriggerScoreCalculate.parseTest(file);
     }
@@ -111,6 +110,7 @@ public class TestTriggerScoreCalculate {
 
             calculate();
             List<Map.Entry<String, Double>> list = new ArrayList<Map.Entry<String, Double>>(sorceMap.entrySet());
+            System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
             Collections.sort(list, new Comparator<Map.Entry<String, Double>>() {
                 public int compare(Map.Entry<String, Double> o1, Map.Entry<String, Double> o2) {
                     return o1.getValue()>o2.getValue()?-1:1;
@@ -142,6 +142,5 @@ public class TestTriggerScoreCalculate {
             sorceMap.put(word, result);
         }
     }
-
 
 }

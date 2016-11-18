@@ -84,8 +84,8 @@ public class CECTxtDeal {
             	xmlContent.append(tempString);
             }
             
-            xmlStr=xmlContent.toString().replaceAll("\r|\n|\t", "");
-            //xmlStr=xmlContent.toString().replaceAll(REG_XMLNODE, "").replaceAll("\r|\n|\t", "").replaceAll(" ", "");
+            //xmlStr=xmlContent.toString().replaceAll("\r|\n|\t", "");
+            xmlStr=xmlContent.toString().replaceAll(REG_XMLNODE, "").replaceAll("\r|\n|\t", "").replaceAll(" ", "");
             
             reader.close();
         } catch (IOException e) {
