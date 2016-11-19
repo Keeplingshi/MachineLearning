@@ -20,9 +20,6 @@ import com.google.common.collect.Maps;
 import com.model.EventEnum;
 import com.tools.StringUtils;
 
-/**
- * Created by feng on 2016/9/12.
- */
 public class CreateResult {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CreateResult.class);
