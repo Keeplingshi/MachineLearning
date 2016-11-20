@@ -1,7 +1,6 @@
 package com.train;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -12,8 +11,6 @@ import java.util.regex.Pattern;
 import com.google.common.base.Charsets;
 import com.google.common.collect.Maps;
 import com.google.common.io.Files;
-import com.google.common.io.LineProcessor;
-import com.lineprocessor.EventProcessor;
 import com.model.EventEnum;
 
 /**
@@ -23,27 +20,12 @@ public class EventParser {
 
     private static String reg_pattern = "<Denoter.*?>([^</]+)</Denoter>";
     static Pattern pattern = Pattern.compile(reg_pattern);
-	
-//    /**
-//     * 根据训练语料获取触发词（事件）
-//     * @param file
-//     * @return
-//     */
-//    public static Map<EventEnum, Map<String, Integer>> parseEvent(File file){
-//
-//        if(null==file || !file.exists()){
-//        	return null;
-//        }
-//
-//        LineProcessor<Map<EventEnum, Map<String, Integer>>> linePorcessor = new EventProcessor();
-//        try {
-//            Files.readLines(file, Charsets.UTF_8, linePorcessor);
-//        } catch (IOException e) {
-//
-//        }
-//        return linePorcessor.getResult();
-//    }
     
+    /**
+     * 获取事件触发词及其所代表事件类型
+     * @param path
+     * @return
+     */
     public static Map<EventEnum, Map<String, Integer>> parseEvent(String path){
 
     	Map<EventEnum, Map<String, Integer>> triggerMap=new HashMap<EventEnum, Map<String,Integer>>();

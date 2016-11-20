@@ -88,9 +88,7 @@ public class TestTriggerScoreCalculate {
      * @param file
      */
     public static void parseTest(File file) {
-
         if(null==file) return;
-
         BufferedReader bufferedReader = null;
         try {
             bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
@@ -105,9 +103,7 @@ public class TestTriggerScoreCalculate {
                         triggerSet.add(strs[0]);
                     }
                 }
-
             }
-
             calculate();
             List<Map.Entry<String, Double>> list = new ArrayList<Map.Entry<String, Double>>(sorceMap.entrySet());
             System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
@@ -117,8 +113,6 @@ public class TestTriggerScoreCalculate {
                 }
             });
             LOGGER.info("【计算结果】,{},{}",list.size(), list);
-
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -128,7 +122,7 @@ public class TestTriggerScoreCalculate {
     }
 
     /**
-     * 计算值
+     * 计算TD*IDF值
      */
     private static void calculate() {
 

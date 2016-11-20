@@ -32,7 +32,7 @@ public class SampWordParse {
    static{
 	   
 	   String sampleword_path=System.getProperty("user.dir")+"/data/samplewordtree/sampleword.txt";
-	   System.out.println("1\t"+sampleword_path);
+	   //System.out.println("1\t"+sampleword_path);
        BufferedReader br = null;
        try {
             br = new BufferedReader(new InputStreamReader(new FileInputStream(sampleword_path)));
