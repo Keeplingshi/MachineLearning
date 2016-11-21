@@ -7,13 +7,22 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -295,6 +304,131 @@ public class CECTxtDeal {
 			}
 		}
 		return str;
+	}
+	
+	
+	public static void readExcel(String originPath,String outPath)
+	{
+		String[] removeWord={"报道","电","死","伤","死亡","重伤","送往","手术","表示","通知","治疗",
+				"发稿","说","介绍","呼吁","了解","统计","前往","赶往","轻伤","讯","受伤","核查","处理","带领",
+				"交谈","赶到","指示","组织","救援","亲临","指挥","送医","接受","调查","展开","重视","看望"
+				,"做好","称","获悉","消息","参加","召集","闻讯","确定","救治","抢救","送到","到","事故","事"
+				,"透露","接警","查看","报警","看到","关闭","宣布","抓获","证实","关闭","制造","报告","出动"
+				,"帮助","批示","到达","派出","赶赴","接到","使用","采血","发现","调派","启动","成立","确保"
+				,"检查","开展","追究","快讯","清理","排查","救出","调集","增援","稀释","转交","确认","观察了解"
+				,"协查","解救","救出","安慰","鼓励","握着","给","决定","扩大","配合","装满","包扎","此次事故"
+				,"伤亡","听到","丧生","到场","通报","召开","处置","整治","侦查","奋战","防止","疏散","安置"
+				,"调查统计","接报","救","站","观望","善后","回家","抓着","保住","配带","休息","更新","核对"
+				,"注意","求助","带离","正常","遇难","报"};
+		List<String> list=new ArrayList<String>(0);
+		Collections.addAll(list, removeWord);
+		
+		Workbook originWb=null;
+		
+		HSSFWorkbook outWorkbook = new HSSFWorkbook();
+		HSSFSheet outSheet = outWorkbook.createSheet("event");
+		
+		try {
+			originWb = WorkbookFactory.create(new File(originPath));
+		} catch (EncryptedDocumentException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InvalidFormatException e) {
+			e.printStackTrace();
+		}
+		
+		Sheet originSheet = originWb.getSheetAt(0);
+		Cell cell=null;
+		
+		int i=1;
+		HSSFRow outRow = null;
+		HSSFCell outCell=null;
+		
+		for(Row row:originSheet)
+		{
+			if(row.getRowNum()==0){
+				continue;
+			}
+
+			outRow = outSheet.createRow(i++);
+			
+			//序号
+			cell=row.getCell(0);
+			outCell=outRow.createCell(0);
+			if(cell!=null){
+				outCell.setCellValue(cell.toString());
+			}
+			
+			
+			//句子
+			cell=row.getCell(1);
+			outCell=outRow.createCell(1);
+			if(cell!=null){
+				outCell.setCellValue(cell.toString());
+			}
+			
+			//参与者
+			cell=row.getCell(2);
+			outCell=outRow.createCell(2);
+			if(cell!=null){
+				outCell.setCellValue(cell.toString());
+			}
+			
+			//时间
+			cell=row.getCell(3);
+			outCell=outRow.createCell(3);
+			if(cell!=null){
+				outCell.setCellValue(cell.toString());
+			}
+			
+			//地点
+			cell=row.getCell(4);
+			outCell=outRow.createCell(4);
+			if(cell!=null){
+				outCell.setCellValue(cell.toString());
+			}
+			
+			//触发词
+			cell=row.getCell(5);
+			String triggerWord="";
+			outCell=outRow.createCell(5);
+			if(cell!=null){
+				outCell.setCellValue(cell.toString());
+				triggerWord=cell.toString().trim();
+			}
+
+			//对象
+			cell=row.getCell(6);
+			outCell=outRow.createCell(6);
+			if(cell!=null){
+				outCell.setCellValue(cell.toString());
+			}
+			
+			//事件类型
+			cell=row.getCell(7);
+			outCell=outRow.createCell(7);
+			if(list.contains(triggerWord)){
+				outCell.setCellValue("");
+			}else{
+				if(cell!=null){
+					outCell.setCellValue(cell.toString());
+				}
+			}
+			
+			
+		}
+		
+		try {
+			if(FileUtil.createFile(outPath)){
+				OutputStream out = new FileOutputStream(outPath);
+				outWorkbook.write(out);
+				out.close();
+			}
+		} catch (IOException e) {
+			
+		}
+		
 	}
 	
 }

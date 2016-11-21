@@ -1,6 +1,5 @@
-package com.sampleword;
+package com.event;
 
-import java.io.File;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -8,7 +7,6 @@ import java.util.Set;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.model.EventEnum;
-import com.train.EventParser;
 
 /**
  * 触发词扩展
@@ -28,9 +26,9 @@ public class TriggerLarger {
         sampleWordNum2WordsMap = SampWordParse.label2wordMap;
         word2NumMap = SampWordParse.word2labelMap;
         
-        //String path=System.getProperty("user.dir")+"/data/cec/CEC_Train_Corpous/";
-        String path=System.getProperty("user.dir")+"/data/cec/CEC_Train_Corpous/eventOut.xls";
+        String path=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/eventOut.xls";
         originType2WordAndCountMap = EventParser.parseEvent(path);
+        System.out.println(originType2WordAndCountMap);
         
 
         for(Map.Entry<EventEnum,  Map<String, Integer>> entity : originType2WordAndCountMap.entrySet()){

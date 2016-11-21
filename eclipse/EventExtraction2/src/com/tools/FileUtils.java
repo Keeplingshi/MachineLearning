@@ -86,4 +86,67 @@ public class FileUtils {
         }
 
     }
+    
+    /**
+     * 将内容写入txt文件
+     * @param content
+     * @param path
+     * @return
+     */
+	public static boolean writeTxtFile(StringBuffer content, String path) {
+		boolean flag = false;
+		
+		File file=new File(path);
+		if(!file.exists()){
+			createFile(path);
+		}
+		
+		FileOutputStream outputStream = null;
+		try {
+			outputStream = new FileOutputStream(path);
+			outputStream.write(content.toString().getBytes("UTF-8"));
+			outputStream.close();
+			flag = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return flag;
+	}
+	
+	/**
+	 * 创建文件
+	 * 
+	 * @param filename
+	 *            文件名称
+	 * @return
+	 */
+	public static boolean createFile(String destFileName) {
+
+		File file = new File(destFileName);
+		// 如果存在，返回true
+		if (file.exists()) {
+			return true;
+		}
+		if (destFileName.endsWith(File.separator)) {
+			return false;
+		}
+		// 判断目标文件所在的目录是否存在
+		if (!file.getParentFile().exists()) {
+			// 如果目标文件所在的目录不存在，则创建父目录
+			if (!file.getParentFile().mkdirs()) {
+				return false;
+			}
+		}
+		// 创建目标文件
+		try {
+			if (file.createNewFile()) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (IOException e) {
+			return false;
+		}
+	}
+	
 }
