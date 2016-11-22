@@ -21,7 +21,9 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import com.event.CECTxtDeal;
+import com.event.TestTriggerScoreCalculate;
 import com.event.TriggerLarger;
+import com.event.TriggerScorePre;
 import com.nlpir.NlpirMethod;
 import com.util.FileUtil;
 
@@ -66,7 +68,17 @@ public class Main {
 		
 		
 		//new TriggerLarger();
-		System.out.println(TriggerLarger.word2typeMap);
+		//System.out.println(TriggerLarger.word2typeMap);
+		
+//        String train_seq_path=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
+//        //System.out.println("3\t"+train_seq_path);
+//        File file = new File(train_seq_path);
+//        TriggerScorePre.splitSentece(file);
+
+        String test_seq_path=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
+        File file = new File(test_seq_path);
+        TestTriggerScoreCalculate.parseTest(file);
+		
 	}
 	
 
