@@ -60,10 +60,10 @@ public class TriggerScorePre {
 
         word2typeMap = TriggerLarger.getWord2typeMap();
 
-//        String train_seq_path=System.getProperty("user.dir")+"/data/cec/CEC_Train_Corpous/cecResult.txt";
-//        //System.out.println("3\t"+train_seq_path);
-//        File file = new File(train_seq_path);
-//        TriggerScorePre.splitSentece(file);
+        String train_seq_path=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
+        //System.out.println("3\t"+train_seq_path);
+        File file = new File(train_seq_path);
+        TriggerScorePre.splitSentece(file);
     }
 
     /**
