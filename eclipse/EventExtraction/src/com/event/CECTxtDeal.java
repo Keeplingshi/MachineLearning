@@ -2,15 +2,21 @@ package com.event;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -29,6 +35,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.dom4j.tree.DefaultText;
 
+import com.model.EventEnum;
 import com.util.FileUtil;
 
 public class CECTxtDeal {
@@ -428,6 +435,47 @@ public class CECTxtDeal {
 		} catch (IOException e) {
 			
 		}
+		
+	}
+
+	/**
+	 * 读取触发词
+	 * @param triggerWordPath
+	 */
+	public static Map<EventEnum, List<String>> readTriggerWord(String triggerWordPath) {
+
+		Map<EventEnum, List<String>> triggerMap=new HashMap<EventEnum, List<String>>();
+		
+		File file=new File(triggerWordPath);
+        InputStreamReader read;
+		try {
+			read = new InputStreamReader(new FileInputStream(file),"UTF-8");
+	        BufferedReader bufferedReader = new BufferedReader(read);
+	        String lineTxt = null;
+	        int i=0;
+	        EventEnum eventEnum=null;
+	        while((lineTxt = bufferedReader.readLine()) != null){
+	            if(i%2==0){
+	            	eventEnum=EventEnum.valueOf(lineTxt.trim());
+	            }else{
+	            	List<String> list=new ArrayList<String>();
+	            	String[] strArray=lineTxt.replace("{", "").replace("}", "").split(",");
+	            	for(String str:strArray)
+	            	{
+	            		list.add(str.split("=")[0]);
+	            	}
+	            	
+	            	triggerMap.put(eventEnum, list);
+	            }
+	        	i++;
+	        }
+	        read.close();
+			
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		return triggerMap;
+
 		
 	}
 	
