@@ -63,7 +63,6 @@ public class TriggerScorePre {
         word2typeMap = TriggerLarger.getWord2typeMap();
 
         String train_seq_path=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
-        //System.out.println("3\t"+train_seq_path);
         File file = new File(train_seq_path);
         TriggerScorePre.splitSentece(file);
     }
@@ -117,7 +116,7 @@ public class TriggerScorePre {
                 }
             }
 
-            Set<String> set = Sets.newHashSet(tokens);
+            //Set<String> set = Sets.newHashSet(tokens);
             for(String token : tokens){
                 if(word2typeMap.containsKey(token)){
                     increaseMap(trigger2SentenceCounterMap, token);   //一个句子只能统计一个相同的词
