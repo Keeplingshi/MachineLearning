@@ -24,7 +24,7 @@ public class SampWordParse {
 
     final static Logger LOGGER = LoggerFactory.getLogger(SampWordParse.class);
 
-    private static final int LABEL_LEN= 5; //代表4级的长度为5
+    private static final int LABEL_LEN= 7; //代表5级
 
     public static Map<String, List<String>> label2wordMap = Maps.newHashMap();
     public static Map<String, String> word2labelMap = Maps.newHashMap();
@@ -32,7 +32,6 @@ public class SampWordParse {
    static{
 	   
 	   String sampleword_path=System.getProperty("user.dir")+"/corpous/samplewordtree/sampleword.txt";
-	   //System.out.println("1\t"+sampleword_path);
        BufferedReader br = null;
        try {
             br = new BufferedReader(new InputStreamReader(new FileInputStream(sampleword_path)));
@@ -40,8 +39,8 @@ public class SampWordParse {
            while((line=br.readLine()) != null){
                String[] tokens = line.trim().split("=");
                if(tokens.length == 2){
-                    String label = tokens[0].substring(0,LABEL_LEN);
-                    String[] strs = tokens[1].trim().split("(\\s)+");
+            	   String label = tokens[0].substring(0,LABEL_LEN);
+            	   String[] strs = tokens[1].trim().split("(\\s)+");
                    List<String> list = label2wordMap.get(label);
                    for(String str : strs){
                        if(null == list){

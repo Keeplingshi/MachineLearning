@@ -22,7 +22,9 @@ import com.model.EventEnum;
 import com.event.TriggerLarger;
 
 /**
- * Created by feng on 2016/9/10.
+ * 
+ * @author chenbin
+ *
  */
 public class TriggerScorePre {
 

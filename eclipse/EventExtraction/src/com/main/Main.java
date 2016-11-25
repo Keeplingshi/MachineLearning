@@ -40,9 +40,17 @@ public class Main {
 
 		// String excelPath="C:\\Users\\chenbin\\Desktop\\event.xls";
 		// String outPath="C:\\Users\\chenbin\\Desktop\\eventOut.xls";
-		String triggerWordPath=System.getProperty("user.dir") + "/corpous/cec/CEC_Train_Corpous/triggerWord.txt";
-		Map<EventEnum, List<String>> triggerMap=CECTxtDeal.readTriggerWord(triggerWordPath);
-		System.out.println(triggerMap);
+
+//		String triggerWordPath=System.getProperty("user.dir") + "/corpous/cec/CEC_Train_Corpous/triggerWord.txt";
+//		Map<EventEnum, List<String>> triggerMap=CECTxtDeal.readTriggerWord(triggerWordPath);
+//		System.out.println(triggerMap);
+
+		
+		//new TriggerLarger();
+		//System.out.println(TriggerLarger.getType2wordsMap());
+		
+//		String path=System.getProperty("user.dir") + "/corpous/cec/CEC_Train_Corpous/cecCorpous.txt";
+//		CECTxtDeal.cecParticiple(path);
 		
 //		String path = System.getProperty("user.dir") + "/corpous/cec/CEC_Train_Corpous/eventOut.xls";
 //		Map<EventEnum, Map<String, Integer>> originType2WordAndCountMap = EventParser.parseEvent(path);
@@ -64,18 +72,13 @@ public class Main {
 
 		// System.out.println(originType2WordAndCountMap);
 
-		// String
-		// projectRootPath=System.getProperty("user.dir")+"/corpous/cec/";
-		//////
-		// String xmlFolderPath=projectRootPath+"/CEC_Train_Corpous/";
-		// String
-		// cecCorpous=projectRootPath+"/CEC_Train_Corpous/cecTestCorpous.txt";
-		// String
-		// sResultFilename=projectRootPath+"/CEC_Train_Corpous/cecTestResult.txt";
-		//
-		// CECTxtDeal.cecXmlDeal(xmlFolderPath);
-		////
-		// CECTxtDeal.cecCorpousExtract(xmlFolderPath,cecCorpous);
+//		 String projectRootPath=System.getProperty("user.dir")+"/corpous/cec/";
+//		////
+//		 String xmlFolderPath=projectRootPath+"/CEC_Train_Corpous/";
+//		 String cecCorpous=projectRootPath+"/CEC_Train_Corpous/cecCorpous.txt";
+//		
+//		//
+//		 CECTxtDeal.cecCorpousExtract(xmlFolderPath,cecCorpous);
 
 		
 //		String content="8月19日晚，315国道德令哈段(480KM+700M)发生一起交通事故";

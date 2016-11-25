@@ -36,6 +36,7 @@ import org.dom4j.io.SAXReader;
 import org.dom4j.tree.DefaultText;
 
 import com.model.EventEnum;
+import com.nlpir.NlpirMethod;
 import com.util.FileUtil;
 
 public class CECTxtDeal {
@@ -439,7 +440,7 @@ public class CECTxtDeal {
 	}
 
 	/**
-	 * 读取触发词
+	 * 读取触发词，读取的是triggerWord文件
 	 * @param triggerWordPath
 	 */
 	public static Map<EventEnum, List<String>> readTriggerWord(String triggerWordPath) {
@@ -462,7 +463,7 @@ public class CECTxtDeal {
 	            	String[] strArray=lineTxt.replace("{", "").replace("}", "").split(",");
 	            	for(String str:strArray)
 	            	{
-	            		list.add(str.split("=")[0]);
+	            		list.add(str.split("=")[0].trim());
 	            	}
 	            	
 	            	triggerMap.put(eventEnum, list);
@@ -475,8 +476,17 @@ public class CECTxtDeal {
 			e.printStackTrace();
 		}
 		return triggerMap;
-
-		
+	}
+	
+	/**
+	 * 对CEC语料分词
+	 * @param path
+	 */
+	public static void cecParticiple(String path)
+	{
+		String cecResultPath=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
+		NlpirMethod.NLPIR_AddUserWord("交通事故 n");//将交通事故加入词典，否则会被分词为交通 事故，两个词
+		NlpirMethod.NLPIR_FileProcess(path, cecResultPath, 1);
 	}
 	
 }
