@@ -110,9 +110,9 @@ public class Main {
 		// File file = new File(train_seq_path);
 		// TriggerScorePre.splitSentece(file);
 
-		String test_seq_path=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
-		File file = new File(test_seq_path);
-		TestTriggerScoreCalculate.parseTest(file);
+//		String test_seq_path=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
+//		File file = new File(test_seq_path);
+//		TestTriggerScoreCalculate.parseTest(file);
 
 //		System.out.println(TriggerLarger.getType2wordsMap());
 //		new TriggerScorePre();

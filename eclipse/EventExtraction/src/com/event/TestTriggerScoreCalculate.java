@@ -70,7 +70,7 @@ public class TestTriggerScoreCalculate {
 
     static{
 
-        word2typeMap = TriggerScorePre.getWord2typeMap();
+    	word2typeMap = TriggerLarger.getWord2typeMap();
         trigger2CounterMap = TriggerScorePre.getTrigger2CounterMap();
         trigger2SentenceCounterMap = TriggerScorePre.getTrigger2SentenceCounterMap();
         sentenceTotalNum = TriggerScorePre.getSentenceTotalNum();

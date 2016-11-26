@@ -32,12 +32,6 @@ public class TriggerScorePre {
     public static final String SEPORETOR = "[。,!,?]";
 
     /**
-     * 使用已有的数据
-     */
-    //词==》类型
-    public static Map<String, EventEnum> word2typeMap = Maps.newHashMap();
-
-    /**
      * 需要计算的值
      */
     //触发词触发事件个数
@@ -60,7 +54,7 @@ public class TriggerScorePre {
 
     static{
 
-        word2typeMap = TriggerLarger.getWord2typeMap();
+    	
 
         String train_seq_path=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
         File file = new File(train_seq_path);
@@ -105,6 +99,9 @@ public class TriggerScorePre {
      * @param line
      */
     private static void parseLine(String line) {
+    	
+    	Map<String, EventEnum> word2typeMap = TriggerLarger.getWord2typeMap();
+    	
         Iterable<String> list = Splitter.on(Pattern.compile(SEPORETOR)).trimResults().omitEmptyStrings().split(line);
         for(String str : list){
             sentenceList.add(str);
@@ -187,11 +184,4 @@ public class TriggerScorePre {
         TriggerScorePre.trigger2ScordMap = trigger2ScordMap;
     }
 
-    public static Map<String, EventEnum> getWord2typeMap() {
-        return word2typeMap;
-    }
-
-    public static void setWord2typeMap(Map<String, EventEnum> word2typeMap) {
-        TriggerScorePre.word2typeMap = word2typeMap;
-    }
 }
