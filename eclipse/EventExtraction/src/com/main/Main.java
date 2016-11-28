@@ -1,38 +1,6 @@
 package com.main;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-
-import com.event.CECTxtDeal;
-import com.event.EventParser;
-import com.event.TestTriggerScoreCalculate;
-import com.event.TriggerLarger;
-import com.event.TriggerScorePre;
-import com.model.EventEnum;
-import com.nlpir.NlpirMethod;
-import com.util.FileUtil;
+import com.event.TriggerScore;
 
 public class Main {
 
@@ -117,22 +85,11 @@ public class Main {
 //		System.out.println(TriggerLarger.getType2wordsMap());
 //		new TriggerScorePre();
 		
+		
+		//Map<String, Double> sorceMap=TriggerScore.getSorceMap();
+		System.out.println(TriggerScore.getSorceMap());
 	}
 
-	public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map)
-	{
-		List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());
-		Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
-			public int compare(Map.Entry<K, V> o1, Map.Entry<K, V> o2) {
-				return (o1.getValue()).compareTo(o2.getValue());
-			}
-		});
 
-		Map<K, V> result = new LinkedHashMap<K, V>();
-		for (Map.Entry<K, V> entry : list) {
-			result.put(entry.getKey(), entry.getValue());
-		}
-		return result;
-	}
 
 }

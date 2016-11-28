@@ -1,4 +1,4 @@
-package com.event;
+package trash;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,7 +22,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.model.EventEnum;
-import com.event.TriggerScorePre;
+import com.event.TriggerLarger;
 
 
 public class TestTriggerScoreCalculate {

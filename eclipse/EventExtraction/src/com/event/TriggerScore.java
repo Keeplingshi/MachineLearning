@@ -6,7 +6,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -17,9 +22,15 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
 import com.model.EventEnum;
 
+import trash.TriggerScorePre;
+
+/**
+ * 触发词分值计算
+ * @author chenbin
+ *
+ */
 public class TriggerScore {
 
 	static final Logger LOGGER = LoggerFactory.getLogger(TriggerScorePre.class);
@@ -45,40 +56,41 @@ public class TriggerScore {
 	/**
 	 * 触发词得分
 	 */
-	private static Map<String, Double> sorceMap = Maps.newHashMap();
+	private static Map<EventEnum,Map<String, Double>> scoreMap = Maps.newHashMap();
 	
-	
-	public static Map<String, Double> getSorceMap() {
-		return sorceMap;
-	}
-
-	public static void setSorceMap(Map<String, Double> sorceMap) {
-		TriggerScore.sorceMap = sorceMap;
-	}
-
-	public static void main(String[] args) {
+	static {
 
 		String resultPath=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
 		File file=new File(resultPath);
 		countSentence(file);
+		
         Double result;
         for(String word : triggerCounterMap.keySet()){
             result = 0.0;
             Double tfw = 1.0*triggerCounterMap.get(word)/eventSentenceMap.get(word2typeMap.get(word)).size();
             Double idfw = Math.log((double)1.0*totalNum/triggerCounterMap.get(word))/Math.log((double)2);//Math.log(1.0*totalNum/triggerCounterMap.get(word));
             result = tfw *idfw;
-            sorceMap.put(word, result);
+            
+            Map<String, Double> map=scoreMap.get(word2typeMap.get(word));
+            if(map==null){
+            	map=new HashMap<>();
+            }
+            map.put(word, result);
+            map=sortByValue(map);
+            scoreMap.put(word2typeMap.get(word), map);
         }
-		System.out.println(sorceMap);
+        
 	}
 
     /**
-     * 获取train的句子，词性对我们没有用
+     * 计算句子中的信息
      * @param file
      * @return
      */
-    public static List<String> countSentence(File file){
-        if(null==file) return null;
+    public static void countSentence(File file){
+        if(null==file){
+        	return ;
+        }
 
         BufferedReader bufferedReader = null;
         try {
@@ -116,7 +128,6 @@ public class TriggerScore {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
     }
     
     /**
@@ -132,5 +143,36 @@ public class TriggerScore {
             map.put(key, 1);
         }
     }
+	
+    /**
+     * 根据Value值对Map排序，从大到小
+     * @param map
+     * @return
+     */
+	public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map)
+	{
+		List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());
+		Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
+			public int compare(Map.Entry<K, V> o1, Map.Entry<K, V> o2) {
+				//从大到小排，从小到大则o1，o2换位置
+				return (o2.getValue()).compareTo(o1.getValue());
+			}
+		});
+
+		Map<K, V> result = new LinkedHashMap<K, V>();
+		for (Map.Entry<K, V> entry : list) {
+			result.put(entry.getKey(), entry.getValue());
+		}
+		return result;
+	}
+
+	public static Map<EventEnum, Map<String, Double>> getSorceMap() {
+		return scoreMap;
+	}
+
+	public static void setSorceMap(Map<EventEnum, Map<String, Double>> sorceMap) {
+		TriggerScore.scoreMap = sorceMap;
+	}
+	
 	
 }

@@ -1,4 +1,4 @@
-package com.event;
+package trash;
 
 import java.io.File;
 import java.io.IOException;
