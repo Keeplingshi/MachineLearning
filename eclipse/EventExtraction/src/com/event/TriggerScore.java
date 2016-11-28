@@ -34,6 +34,10 @@ import trash.TriggerScorePre;
 public class TriggerScore {
 
 	static final Logger LOGGER = LoggerFactory.getLogger(TriggerScorePre.class);
+	
+	/**
+	 * 句子分类
+	 */
 	public static final String SEPORETOR = "[。,!，?]";
 	
 	public static Map<String, EventEnum> word2typeMap = TriggerLarger.getWord2typeMap();
@@ -59,11 +63,12 @@ public class TriggerScore {
 	private static Map<EventEnum,Map<String, Double>> scoreMap = Maps.newHashMap();
 	
 	static {
-
+		
 		String resultPath=System.getProperty("user.dir")+"/corpous/cec/CEC_Train_Corpous/cecResult.txt";
 		File file=new File(resultPath);
 		countSentence(file);
 		
+		//计算触发词的score
         Double result;
         for(String word : triggerCounterMap.keySet()){
             result = 0.0;
