@@ -2,16 +2,251 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01bb4a45-4611-45fc-ad1d-9aa78a51bb23" name="Default" comment="实验二">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/misc.xml" afterPath="$PROJECT_DIR$/../python/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/txt/TxtDeal.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/txt/TxtDeal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Test.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../python/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/run/output/training_myself/model_NTP.weights" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/run/output/training_myself/model_NTP.weights" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/NewWord.lst" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/NewWord.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/VerbStatistic/ReadTable.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/VerbStatistic/ReadTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/NewWord.lst" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/NewWord.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Main.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Test.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/main/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/txt/TxtDeal.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR/EventExtract/src/com/txt/TxtDeal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/NewWord.lst" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/NewWord.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/command_lines.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/command_lines.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/acl_eval_out.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/acl_eval_out.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_E7-14.extent.end_943_to_936.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_E7-14.extent.end_943_to_936.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_E7-14.head.end_943_to_987.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_E7-14.head.end_943_to_987.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_miss1.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_miss1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_no_E1-4.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_no_E1-4.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_no_E7-9.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_no_E7-9.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_no_E7-9_E7-14.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_entity_no_E7-9_E7-14.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_same2.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/corpus/fake_system_output/out_same2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/data/dict/TIME" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/data/dict/TIME" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/data/left3words-wsj-0-18.tagger.props" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/data/left3words-wsj-0-18.tagger.props" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/lib/mallet/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/lib/mallet/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/run/doclists/split1.0/dev.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/run/doclists/split1.0/dev.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/run/doclists/split1.0/test.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/run/doclists/split1.0/test.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/run/doclists/split1.0/train.txt" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/run/doclists/split1.0/train.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/maxent/MaxEntDecoder.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/maxent/MaxEntDecoder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/maxent/MaxentTrainer.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/maxent/MaxentTrainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/perceptron/core/DecoderOverPredicted.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/perceptron/core/DecoderOverPredicted.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/perceptron/learnCurve/LearningCurve.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/perceptron/learnCurve/LearningCurve.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/perceptron/types/Document.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/perceptron/types/Document.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/ChunkWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/ChunkWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/ExceptionUtil.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/ExceptionUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/FileUtils.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/FileUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/LoggerUtils.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/LoggerUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/OS.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/OS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/POSTaggerWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/POSTaggerWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/ParserWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/ParserWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/RecursiveFileListIterator.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/RecursiveFileListIterator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/SentDetectorWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/SentDetectorWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/TokenizerWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/TokenizerWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/WordNetWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ACE_EVENT/src/edu/cuny/qc/util/WordNetWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/LICENSE" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/README.md" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/config.properties" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/log4j2.xml" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/log4j2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/action_denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/action_denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/emergency_denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/emergency_denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/movement_denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/movement_denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/operation_denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/operation_denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/perception_denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/perception_denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/stateChange_denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/stateChange_denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/statement_denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/statement_denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/thoughtevent_denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/conf/resources/synset/thoughtevent_denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/exceptionLogs/automaticAnnotation.log" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/exceptionLogs/automaticAnnotation.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/constant/EventConstant.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/constant/EventConstant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/domain/FilterEntity.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/domain/FilterEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/exception/FormatTextException.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/exception/FormatTextException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/log/MyLogger.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/log/MyLogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ltp/cloud/LTPAction.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ltp/cloud/LTPAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ltp/domain/LTPXMLTag.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ltp/domain/LTPXMLTag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ltp/parse/LTP_Parse.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ltp/parse/LTP_Parse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/preprocess/PreProcess.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/preprocess/PreProcess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/test/CustomSegmentation.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/test/CustomSegmentation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/test/TestFileUtil.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/test/TestFileUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/test/TestReadConfigFile.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/test/TestReadConfigFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/test/file.txt" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/test/file.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ui/Annotation.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ui/Annotation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ui/MainUI.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ui/MainUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ui/OnClickListener.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ui/OnClickListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ui/ShowProgressBar.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/ui/ShowProgressBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/EncodingUtil.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/EncodingUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/EventFactory.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/EventFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/FileUtil.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/FileUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/FilterUtil.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/FilterUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/MergeElementUtil.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/MergeElementUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/MySplit.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/MySplit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/ReadConfigFile.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/ReadConfigFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/WordsUtil.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/WordsUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/WriteToXMLUtil.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/edu/shu/auto/util/WriteToXMLUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/example/edu/shu/auto/annotation/Demo.java" afterPath="$PROJECT_DIR$/../eclipse/AutoAnnotation/src/example/edu/shu/auto/annotation/Demo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/20160909.err" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/20160909.err" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/Configure.xml" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/Configure.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/Data.txt" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/Data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/ICTCLAS_First.map" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/ICTCLAS_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/ICTPOS.map" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/ICTPOS.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/NLPIR_First.map" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/NLPIR_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/PKU.map" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/PKU.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/PKU_First.map" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/PKU_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/UserDefinedDict.lst" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/UserDefinedDict.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/userfilterword.txt" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/Data/userfilterword.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/dict/user_dict.txt" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/dict/user_dict.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/main/Main.java" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/nlpir/NlpirLib.java" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/nlpir/NlpirLib.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/nlpir/NlpirMethod.java" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/nlpir/NlpirMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/nlpir/OSInfo.java" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/nlpir/OSInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/word2vec/Word2VEC.java" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/word2vec/Word2VEC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/word2vec/WordKmeans.java" afterPath="$PROJECT_DIR$/../eclipse/Automatic_Abstract/src/com/word2vec/WordKmeans.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/models/stopwords/ErrorWords.txt" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/models/stopwords/ErrorWords.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/models/stopwords/NoSenseWords.txt" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/models/stopwords/NoSenseWords.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/models/wordgraph.txt" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/models/wordgraph.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Common/DBtools.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Common/DBtools.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Common/News.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Common/News.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/CrawlerChina.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/CrawlerChina.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/CrawlerWorld.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/CrawlerWorld.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/Four_webpage.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/Four_webpage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/fenghuang.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/fenghuang.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/xinhua.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/xinhua.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/xinhua_world.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/xinhua_world.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/xinlang.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Crawler/Web_new/xinlang.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/AuxiliaryOperate/ConnectNerlogDB.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/AuxiliaryOperate/ConnectNerlogDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/AuxiliaryOperate/GetTimeAndLocation.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/AuxiliaryOperate/GetTimeAndLocation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/AuxiliaryOperate/UpdateUserDic.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/AuxiliaryOperate/UpdateUserDic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification1/TriggerController.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification1/TriggerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification1/TriggerTemplate.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification1/TriggerTemplate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification2/TemplateController.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification2/TemplateController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification2/TrainDataControler.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification2/TrainDataControler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification2/TriggerWord.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Classification2/TriggerWord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Label/ConnectLabelDB.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Label/ConnectLabelDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Label/LabelItem.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Label/LabelItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Main.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Ner/NerExtract.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Ner/NerExtract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Ner/NerTools.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Ner/NerTools.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Ner/Pair.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Ner/Pair.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Program/RunDB.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Program/RunDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Program/RunDetection.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Program/RunDetection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/RoleExtract/Actors_Db_Methods.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/RoleExtract/Actors_Db_Methods.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/RoleExtract/News_Actor_Methods.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/RoleExtract/News_Actor_Methods.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/RoleExtract/News_Log_Methods.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/RoleExtract/News_Log_Methods.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Test/TestKNN.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Test/TestKNN.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Test/TestTFIDF.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/Test/TestTFIDF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/VerbStatistic/TriggerMatrix.java" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/Java_EventDetection_News/VerbStatistic/TriggerMatrix.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/hanlp.properties" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/hanlp.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/iris.tsv" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/iris.tsv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/readme" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/readme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/test.txt" afterPath="$PROJECT_DIR$/../eclipse/Crawler_EventDetection/src/test.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/corpous/CEC_Train_Corpous/denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/corpous/CEC_Train_Corpous/denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/models/stopwords/ErrorWords.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/models/stopwords/ErrorWords.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/models/stopwords/NoSenseWords.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/models/stopwords/NoSenseWords.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/models/wordgraph.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/models/wordgraph.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/RunDetection.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/RunDetection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/label/LabelItem.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/label/LabelItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/ner/NerExtract.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/ner/NerExtract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/ner/NerTools.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/ner/NerTools.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/ner/Pair.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/ner/Pair.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/tools/GetTimeAndLocation.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/tools/GetTimeAndLocation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/trigger/TriggerController.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/trigger/TriggerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/trigger/TriggerTemplate.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/event/trigger/TriggerTemplate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/main/Main.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/main/Test.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/main/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/txt/CECTxtDeal.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/txt/CECTxtDeal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/txt/FileUtil.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/txt/FileUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/txt/WeiBoTxtDeal.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/txt/WeiBoTxtDeal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/txt/WordTemplet.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/com/txt/WordTemplet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtract/src/hanlp.properties" afterPath="$PROJECT_DIR$/../eclipse/EventExtract/src/hanlp.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/20160909.err" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/20160909.err" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/Configure.xml" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/Configure.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/Data.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/Data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/ICTCLAS_First.map" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/ICTCLAS_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/ICTPOS.map" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/ICTPOS.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/NLPIR_First.map" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/NLPIR_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/PKU.map" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/PKU.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/PKU_First.map" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/PKU_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/UserDefinedDict.lst" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/UserDefinedDict.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/userfilterword.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/Data/userfilterword.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/corpous/cec/CEC_Train_Corpous/cecCorpous.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/corpous/cec/CEC_Train_Corpous/cecCorpous.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/corpous/cec/CEC_Train_Corpous/cecTestCorpous.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/corpous/cec/CEC_Train_Corpous/cecTestCorpous.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/corpous/cec/CEC_Train_Corpous/denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/corpous/cec/CEC_Train_Corpous/denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/corpous/cec/CEC_Train_Corpous/triggerWord.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/corpous/cec/CEC_Train_Corpous/triggerWord.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/event/CECTxtDeal.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/event/CECTxtDeal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/event/TriggerScore.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/event/TriggerScore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/main/Main.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/nlpir/NlpirLib.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/nlpir/NlpirLib.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/nlpir/NlpirMethod.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/nlpir/NlpirMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/nlpir/OSInfo.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/nlpir/OSInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/util/FileUtil.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/src/com/util/FileUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction/src/trash/EventParser.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction/src/trash/EventParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction2/data/cec/CEC_Test_Corpous/cecTestCorpous.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction2/data/cec/CEC_Test_Corpous/cecTestCorpous.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction2/data/cec/CEC_Train_Corpous/cecCorpous.txt" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction2/data/cec/CEC_Train_Corpous/cecCorpous.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/EventExtraction2/src/com/main/Main.java" afterPath="$PROJECT_DIR$/../eclipse/EventExtraction2/src/com/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/20160909.err" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/20160909.err" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/Configure.xml" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/Configure.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/Data.txt" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/Data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/ICTCLAS_First.map" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/ICTCLAS_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/ICTPOS.map" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/ICTPOS.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/NLPIR_First.map" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/NLPIR_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/PKU.map" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/PKU.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/PKU_First.map" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/PKU_First.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/UserDefinedDict.lst" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/UserDefinedDict.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/userfilterword.txt" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/Data/userfilterword.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/dict/user_dict.txt" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/dict/user_dict.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/src/com/lingjoin/demo/NlpirLib.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/src/com/lingjoin/demo/NlpirLib.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/src/com/lingjoin/demo/NlpirMethod.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/src/com/lingjoin/demo/NlpirMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/src/com/lingjoin/test/NlpirTest.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/src/com/lingjoin/test/NlpirTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/NLPIR_Project/src/com/lingjoin/util/OSInfo.java" afterPath="$PROJECT_DIR$/../eclipse/NLPIR_Project/src/com/lingjoin/util/OSInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/data/cec/CEC_Train_Corpous/cecCorpous.txt" afterPath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/data/cec/CEC_Train_Corpous/cecCorpous.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/data/cec/CEC_Train_Corpous/denoter.txt" afterPath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/data/cec/CEC_Train_Corpous/denoter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/result.txt" afterPath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/result.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/test-trigger-counter.txt" afterPath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/test-trigger-counter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/train-trigger-counter.txt" afterPath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/train-trigger-counter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/trigger-counter.txt" afterPath="$PROJECT_DIR$/../eclipse/SSH-SVM1.1/trigger-counter.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/command_lines.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/command_lines.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/pom.xml" afterPath="$PROJECT_DIR$/../eclipse/ace_events/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/maxent/MaxEntDecoder.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/maxent/MaxEntDecoder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/maxent/MaxentTrainer.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/maxent/MaxentTrainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/perceptron/core/DecoderOverPredicted.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/perceptron/core/DecoderOverPredicted.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/perceptron/learnCurve/LearningCurve.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/perceptron/learnCurve/LearningCurve.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/perceptron/types/Document.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/perceptron/types/Document.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/ChunkWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/ChunkWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/ExceptionUtil.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/ExceptionUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/FileUtils.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/FileUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/FinalKeysMap.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/FinalKeysMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/LoggerUtils.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/LoggerUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/OS.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/OS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/POSTaggerWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/POSTaggerWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/ParserWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/ParserWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/RecursiveFileListIterator.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/RecursiveFileListIterator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/SentDetectorWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/SentDetectorWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/TokenizerWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/TokenizerWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/UnsupportedParameterException.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/UnsupportedParameterException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/Utils.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/WeightTracer.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/WeightTracer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/WordNetWrapper.java" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/java/edu/cuny/qc/util/WordNetWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/acl_eval_out.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/acl_eval_out.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_E7-14.extent.end_943_to_936.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_E7-14.extent.end_943_to_936.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_E7-14.head.end_943_to_987.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_E7-14.head.end_943_to_987.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_miss1.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_miss1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_no_E1-4.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_no_E1-4.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_no_E7-9.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_no_E7-9.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_no_E7-9_E7-14.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_entity_no_E7-9_E7-14.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_same2.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/corpus/fake_system_output/out_same2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/data/dict/TIME" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/data/dict/TIME" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/data/left3words-wsj-0-18.tagger.props" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/data/left3words-wsj-0-18.tagger.props" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/few_with_many_ATTACK_WordNet_signal_hits.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/few_with_many_ATTACK_WordNet_signal_hits.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/few_with_many_ATTACK_mentions.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/few_with_many_ATTACK_mentions.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/many_ATTACK_one1.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/many_ATTACK_one1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/many_ATTACK_one2.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/many_ATTACK_one2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/new_filelist_ACE_training_25_plus_many_ATTACK_plus_ATTACK_WordNet_signal_hits.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/new_filelist_ACE_training_25_plus_many_ATTACK_plus_ATTACK_WordNet_signal_hits.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/split1.0/dev.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/split1.0/dev.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/split1.0/test.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/split1.0/test.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/split1.0/train.txt" afterPath="$PROJECT_DIR$/../eclipse/ace_events/src/main/resources/doclists/split1.0/train.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/MachineLearning.iml" afterPath="$PROJECT_DIR$/../python/.idea/MachineLearning.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/misc.xml" afterPath="$PROJECT_DIR$/../python/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../python/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" />
     </list>
     <ignored path="tensorflow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,40 +271,7 @@
     <favorites_list name="tensorflow" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shiyan2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shiyan2/shiyan2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input_data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MNIST/input_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -154,6 +356,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -209,9 +414,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane />
       </pane>
       <pane id="Scratches" />
     </panes>
@@ -573,7 +775,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21495327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="725" y="210" width="469" height="620" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14605543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="725" y="210" width="469" height="620" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -962,6 +1164,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MNIST/input_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shiyan2/shiyan2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -972,24 +1190,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MNIST/input_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAoNelp8QLMMKw+YI0xlcZ6CtcpJiGneR29ILdeXRJ55JvyBA18sU6g45kcXVmtTtpKhk8Uv2J3KxUQSmQzbfnw2FlJl0CCkEgSG/X/2l+AaYmG42w+R5SvtOIKbaYPMCVdBl5efNXkTlWSg+L1eaP0AFNdwpB+jrknZjG3TAnbKr+mtRfGj+DOwL+ERTrVSl5XAGshGj7OIx3Tz/q+4ZgxDDCxW4s2fMNoQOKTFoeZUS0</data>
+    <data>AAAAoDsfcM7BQswOMA1qOBV6X2wYymhao+H2XM62YKQZLsG949FQJH2V+6Y2e3hnpznGGX7Ey++nyW71xVDQJzSwYtyVjLu01KyCOpX9iyC+RAtgcgNxCW6ua4vWm17rmwRr0GuSFgyBc1PrFlx51kkHcMbGaG/iI2NVi0xPPQwSNIzCJ18+AkcFOF9s3igJLfG1Dqak28SQPVrelgM4uam1ecMkFBmfnDR0jy/gNNpzSjFe</data>
   </component>
 </project>
